@@ -1,9 +1,17 @@
 package models;
 
-public class User {
+import java.io.Serializable;
+import java.util.List;
+
+public class User implements Serializable {
 
     private String username;
     private String password;
+    private List<User> followers;
+    private List<User> following;
+
+    public User() {
+    }
 
     public User(String username, String password){
         this.username = username;
@@ -26,4 +34,19 @@ public class User {
         this.password = password;
     }
 
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
 }

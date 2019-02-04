@@ -27,7 +27,7 @@ public class LoginController extends HttpServlet {
         Authenticator authenticator = new Authenticator();
         String result = authenticator.authenticate(username, password);
         if (result.equals("success")) {
-            rd = request.getRequestDispatcher("/success.jsp");
+            rd = request.getRequestDispatcher("/succcess.jsp");
             User user = new User(username, password);
             request.setAttribute("user", user);
         } else {
