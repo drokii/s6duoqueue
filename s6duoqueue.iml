@@ -14,6 +14,19 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="ejb" name="EJB">
+      <configuration>
+        <ejbRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+        </ejbRoots>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -27,5 +40,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="JBoss 15.0.1.Final" level="application_server_libraries" />
+    <orderEntry type="library" name="Hibernate 5.4.1-5.4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.0" level="project" />
   </component>
 </module>

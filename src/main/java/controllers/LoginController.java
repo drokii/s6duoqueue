@@ -17,23 +17,5 @@ public class LoginController extends HttpServlet {
         super();
     }
 
-    protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response) throws ServletException, IOException {
-
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        RequestDispatcher rd;
-
-        Authenticator authenticator = new Authenticator();
-        String result = authenticator.authenticate(username, password);
-        if (result.equals("success")) {
-            rd = request.getRequestDispatcher("/succcess.jsp");
-            User user = new User(username, password);
-            request.setAttribute("user", user);
-        } else {
-            rd = request.getRequestDispatcher("/error.jsp");
-        }
-        rd.forward(request, response);
-    }
 
 }
