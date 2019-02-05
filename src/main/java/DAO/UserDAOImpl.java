@@ -4,6 +4,7 @@ import DAO.interfaces.UserDAO;
 import models.User;
 
 public class UserDAOImpl implements UserDAO {
+
     public void addUser(User user) {
 
     }

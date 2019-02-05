@@ -1,20 +1,34 @@
 package models;
 
-import java.io.Serializable;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Objects;
+
+
+@Entity
 public class Mention implements Serializable {
-    private Tweet originalTweet;
+
+    private int id;
     private String mentioned;
+    private int mentionedId;
+    private int mentionerId;
+    private int tweetId;
 
     public Mention() {
     }
 
-    public Tweet getOriginalTweet() {
-        return originalTweet;
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
+        return id;
     }
 
-    public void setOriginalTweet(Tweet originalTweet) {
-        this.originalTweet = originalTweet;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMentioned() {
@@ -25,7 +39,49 @@ public class Mention implements Serializable {
         this.mentioned = mentioned;
     }
 
-    public Mention(Tweet originalTweet, String mentioned) {
-        this.originalTweet = originalTweet;
+    @Basic
+    @Column(name = "mentioned_id", nullable = false)
+    public int getMentionedId() {
+        return mentionedId;
+    }
+
+    public void setMentionedId(int mentionedId) {
+        this.mentionedId = mentionedId;
+    }
+
+    @Basic
+    @Column(name = "mentioner_id", nullable = false)
+    public int getMentionerId() {
+        return mentionerId;
+    }
+
+    public void setMentionerId(int mentionerId) {
+        this.mentionerId = mentionerId;
+    }
+
+    @Basic
+    @Column(name = "tweet_id", nullable = false)
+    public int getTweetId() {
+        return tweetId;
+    }
+
+    public void setTweetId(int tweetId) {
+        this.tweetId = tweetId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mention mention = (Mention) o;
+        return id == mention.id &&
+                mentionedId == mention.mentionedId &&
+                mentionerId == mention.mentionerId &&
+                tweetId == mention.tweetId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, mentionedId, mentionerId, tweetId);
     }
 }

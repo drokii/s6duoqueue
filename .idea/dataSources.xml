@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jeas6@localhost" uuid="f85bca30-147e-44f6-8784-8b206090ae65">
+    <data-source source="LOCAL" name="fontysVPNmysql" uuid="f5962dae-e311-4cbb-afa9-96cb519b0dce">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/jeas6</jdbc-url>
+      <jdbc-url>jdbc:mysql://studmysql01.fhict.local:3306/dbi369519</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

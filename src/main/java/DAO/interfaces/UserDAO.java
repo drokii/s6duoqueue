@@ -3,6 +3,7 @@ package DAO.interfaces;
 import models.User;
 
 public interface UserDAO {
+
     void addUser(User user);
     User getUser(int id);
     void removeUser(int id);

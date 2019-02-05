@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="models.Mention" table="mention" schema="dbi369519">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="mentionedId">
+            <column name="mentioned_id" sql-type="int(11)"/>
+        </property>
+        <property name="mentionerId">
+            <column name="mentioner_id" sql-type="int(11)"/>
+        </property>
+        <property name="tweetId">
+            <column name="tweet_id" sql-type="int(11)"/>
+        </property>
+    </class>
+    <class name="models.Trend" table="trend" schema="dbi369519">
+        <id name="id"/>
+        <property name="name">
+            <column name="name" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="occurrences">
+            <column name="occurrences" sql-type="int(11)"/>
+        </property>
+    </class>
+    <class name="models.Tweet" table="tweet" schema="dbi369519">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="authorId">
+            <column name="author_id" sql-type="int(11)"/>
+        </property>
+        <property name="message">
+            <column name="message" sql-type="varchar(140)" length="140"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+    </class>
+    <class name="models.User" table="user" schema="dbi369519">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="bio">
+            <column name="bio" sql-type="varchar(160)" length="160"/>
+        </property>
+        <property name="website">
+            <column name="website" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="location">
+            <column name="location" sql-type="varchar(40)" length="40"/>
+        </property>
+    </class>
+</hibernate-mapping>
