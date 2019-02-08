@@ -1,0 +1,9 @@
+
+gsquid:UselessImportCheck"ERemove this unused import 'security.CharacterLimitExceededException'.(£İâÍ
+?squid:S1068"*Remove this unused "tweets" private field.(¤Óƒ˜
+Asquid:S1068"-Remove this unused "following" private field.(êéÑm
+Fsquid:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ
+@squid:S1068"+Remove this unused "website" private field.(†µİ·
+Bsquid:S1068"-Remove this unused "followers" private field.(ØÁôĞ
+<squid:S1068"'Remove this unused "bio" private field.(·ğôß
+Fsquid:S1068",Remove this unused "location" private field.(Ìöïüÿÿÿÿ

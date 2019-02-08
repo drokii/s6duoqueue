@@ -6,9 +6,12 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-public abstract class DataAccessClass {
-    private Session currentSession;
+import javax.persistence.PersistenceContext;
 
+public abstract class DataAccessClass {
+
+    @PersistenceContext(unitName="session")
+    private Session currentSession;
     private Transaction currentTransaction;
 
     public Session openCurrentSession() {
@@ -31,7 +34,7 @@ public abstract class DataAccessClass {
         currentSession.close();
     }
 
-    private static SessionFactory getSessionFactory() {
+    private SessionFactory getSessionFactory() {
         Configuration configuration = new Configuration().configure();
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties());

@@ -3,13 +3,17 @@ package db.services;
 import db.DAOs.UserDAOImpl;
 import models.User;
 
+import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.List;
 
+@Stateless
 public class UserService {
-    private static UserDAOImpl userDAO;
+
+    @Inject
+    private UserDAOImpl userDAO;
 
     public UserService() {
-        userDAO = new UserDAOImpl();
     }
 
     public void persist(User entity) {

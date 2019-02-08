@@ -1,37 +1,38 @@
 package db.DAOs;
 
 import db.interfaces.EntityDAO;
-import models.User;
+import models.Trend;
 
 import javax.ejb.Stateless;
 import java.util.List;
 
 @Stateless
-public class UserDAOImpl extends DataAccessClass implements EntityDAO<User, Integer> {
+public class TrendDAOImpl extends DataAccessClass implements EntityDAO<Trend, Integer> {
 
     @Override
-    public void persist(User entity) {
+    public void persist(Trend entity) {
         getCurrentSession().save(entity);
     }
 
     @Override
-    public void update(User entity) {
+    public void update(Trend entity) {
         getCurrentSession().update(entity);
     }
 
     @Override
-    public User findById(Integer id) {
-        return getCurrentSession().get(User.class, id);
+    public Trend findById(Integer id) {
+        return getCurrentSession().get(Trend.class, id);
     }
 
     @Override
-    public void delete(User entity) {
+    public void delete(Trend entity) {
         getCurrentSession().delete(entity);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List findAll() {
-        return (List<User>) getCurrentSession().createQuery("from User").list();
+        return (List<Trend>) getCurrentSession().createQuery("from Trend").list();
     }
 }
+

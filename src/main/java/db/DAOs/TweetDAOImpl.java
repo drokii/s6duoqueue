@@ -1,37 +1,36 @@
 package db.DAOs;
 
 import db.interfaces.EntityDAO;
-import models.User;
 
+import models.Tweet;
 import javax.ejb.Stateless;
 import java.util.List;
 
 @Stateless
-public class UserDAOImpl extends DataAccessClass implements EntityDAO<User, Integer> {
-
+public class TweetDAOImpl extends DataAccessClass implements EntityDAO<Tweet, Integer> {
     @Override
-    public void persist(User entity) {
+    public void persist(Tweet entity) {
         getCurrentSession().save(entity);
     }
 
     @Override
-    public void update(User entity) {
+    public void update(Tweet entity) {
         getCurrentSession().update(entity);
     }
 
     @Override
-    public User findById(Integer id) {
-        return getCurrentSession().get(User.class, id);
+    public Tweet findById(Integer id) {
+        return getCurrentSession().get(Tweet.class, id);
     }
 
     @Override
-    public void delete(User entity) {
+    public void delete(Tweet entity) {
         getCurrentSession().delete(entity);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List findAll() {
-        return (List<User>) getCurrentSession().createQuery("from User").list();
+        return (List<Tweet>) getCurrentSession().createQuery("from Tweet").list();
     }
 }

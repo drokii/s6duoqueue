@@ -8,12 +8,8 @@ public class Trend {
 
     @Id
     private int id;
-
-
-
     private String name;
     private int occurrences;
-
 
     @Column(name = "id", nullable = false)
     public int getId() {
