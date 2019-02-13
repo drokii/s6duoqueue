@@ -1,26 +1,19 @@
-package dao;
+package beans;
 
-import models.User;
+import model.SimpleProperty;
+import model.User;
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
-public class UserDAO {
-
-    @Inject
-    EntityManager em;
+public class UserDAO extends EntityDAO<User>  {
 
     public UserDAO() {
-    }
-
-    public boolean create(User u) {
-        em.persist(u);
-        return true;
     }
 
     public List<User> findAll() {
@@ -32,11 +25,6 @@ public class UserDAO {
         return em.find(User.class, id);
     }
 
-    public void update(User u){
-        em.merge(u);
-    }
 
-    public void delete(User user) {
-        em.remove(user);
-    }
+
 }

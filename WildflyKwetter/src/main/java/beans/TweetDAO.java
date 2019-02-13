@@ -1,27 +1,20 @@
-package dao;
+package beans;
 
-import models.Tweet;
-import models.User;
+import model.SimpleProperty;
+import model.Tweet;
+
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
-public class TweetDAO {
-
-    @Inject
-    private EntityManager em;
+public class TweetDAO extends EntityDAO<Tweet> {
 
     public TweetDAO() {
-    }
-
-    public boolean create(Tweet t) {
-        em.persist(t);
-        return true;
     }
 
     public List<Tweet> findAll() {

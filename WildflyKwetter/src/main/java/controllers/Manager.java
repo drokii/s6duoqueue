@@ -1,5 +1,5 @@
 package controllers;
-import beans.ServiceBean;
+import beans.SimplePropertyDAO;
 import model.SimpleProperty;
 
 import javax.annotation.PostConstruct;
@@ -15,7 +15,7 @@ import javax.inject.Named;
 public class Manager {
 
     @Inject
-    ServiceBean ejb;
+    SimplePropertyDAO ejb;
 
     @Produces
     @Named
