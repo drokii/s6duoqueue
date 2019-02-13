@@ -9,8 +9,11 @@ import javax.enterprise.event.Reception;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
 
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -49,12 +52,12 @@ public class Presenter {
     }
 
     @PostConstruct
-    public void initNewProperty() {
+    public void initNewProperty() throws IOException {
         property = new SimpleProperty();
         retrieveData();
     }
 
-    public void save() {
+    public void save() throws IOException {
         ejb.put(property);
         initNewProperty();
     }

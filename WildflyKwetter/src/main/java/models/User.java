@@ -16,6 +16,7 @@ public class User {
     private String website;
     private String location;
 
+
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
@@ -37,15 +38,6 @@ public class User {
     private List<User> following;
     @OneToMany
     private List<Tweet> tweets;
-
-
-    public User(String username, String password, String bio, String website, String location) {
-        this.username = username;
-        this.password = password;
-        this.bio = bio;
-        this.website = website;
-        this.location = location;
-    }
 
     public User() {
     }
@@ -129,4 +121,17 @@ public class User {
 
         return Objects.hash(id, username, password, bio, website, location);
     }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public List<Tweet> getTweets() {
+        return tweets;
+    }
+
 }
