@@ -1,6 +1,6 @@
 package repo;
 
-import model.SimpleProperty;
+import models.SimpleProperty;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
