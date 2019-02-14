@@ -9,7 +9,7 @@ public abstract class EntityDAO<T> {
     protected EntityManager em;
 
     @Inject
-    private Event<T> propEventSrc;
+    protected Event<T> propEventSrc;
 
     public void create(T t) {
         em.persist(t);

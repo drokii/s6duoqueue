@@ -16,8 +16,8 @@ public class Tweet {
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name = "author_id")
     private User author;
 
     public int getId() {

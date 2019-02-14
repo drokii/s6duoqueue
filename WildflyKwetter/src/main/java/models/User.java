@@ -36,17 +36,24 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "follower_id")
     )
     private List<User> following;
-    @OneToMany
+
+    @OneToMany(mappedBy = "id")
     private List<Tweet> tweets;
 
     public User() {
     }
 
-    private void addFollower(User u) {
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public boolean addFollower(User u) {
         if (!followers.contains(u)) {
             followers.add(u);
             u.addFollowed(this);
+            return true;
+            //TODO: UNFOLLOW MAYBE?
         }
+        return false;
     }
 
     private void addFollowed(User u) {
@@ -54,6 +61,7 @@ public class User {
             following.add(u);
         }
     }
+
 
     public long getId() {
         return id;
@@ -103,25 +111,6 @@ public class User {
         this.location = location;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id &&
-                Objects.equals(username, user.username) &&
-                Objects.equals(password, user.password) &&
-                Objects.equals(bio, user.bio) &&
-                Objects.equals(website, user.website) &&
-                Objects.equals(location, user.location);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(id, username, password, bio, website, location);
-    }
-
     public List<User> getFollowers() {
         return followers;
     }
@@ -134,4 +123,11 @@ public class User {
         return tweets;
     }
 
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Role getRole() {
+        return role;
+    }
 }
