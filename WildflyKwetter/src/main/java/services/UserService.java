@@ -1,6 +1,7 @@
 package services;
 
 import dao.UserDAOJPA;
+import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
 import exceptions.UsernameTakenException;
 import models.Role;
@@ -20,62 +21,67 @@ public class UserService {
 
         User user = userDAO.findByUsername(username);
 
-        if (!user.getUsername().contains(username)){
+        if (user == null) {
             throw new UserNotFoundException();
         }
 
-        if (user.getUsername() != null && userDAO.findByUsername(desired).getUsername() == null) {
+        if (userDAO.findByUsername(desired) == null) {
             user.setUsername(desired);
             userDAO.update(user);
 
-        }else{
+        } else {
             throw new UsernameTakenException();
         }
 
     }
 
-    public boolean editProfile(String username, String bio, String location, String website) throws UserNotFoundException {
-        User user = new User();
-        userDAO.findByUsername(username);
+    public void editProfile(String username, String bio, String location, String website) throws UserNotFoundException, MessageTooLongException {
+        User user = userDAO.findByUsername(username);
 
-        if (user.getUsername() != null && bio.length() > 160) {
+        if (user == null) {
+            throw new UserNotFoundException();
+        }
+
+        if (bio.length() < 160) {
             user.setBio(bio);
             user.setLocation(location);
             user.setWebsite(website);
             userDAO.update(user);
-            return true;
+
+        } else {
+            throw new MessageTooLongException();
         }
 
-        return false;
     }
 
-    public boolean follow(String follower, String followed) throws UserNotFoundException {
-        User userFollower = new User();
-        User userFollowed = new User();
+    public void follow(String follower, String followed) throws UserNotFoundException {
 
-        userFollower = userDAO.findByUsername(follower);
-        userFollowed = userDAO.findByUsername(followed);
+        User userFollower = userDAO.findByUsername(follower);
+        User userFollowed = userDAO.findByUsername(followed);
 
-        if (userFollowed.addFollower(userFollower)) {
-            userDAO.update(userFollowed);
-            userDAO.update(userFollower);
-            return true;
+        if(userFollowed == null || userFollower == null){
+            throw new UserNotFoundException();
         }
 
-        return false;
+        userFollower.addFollowing(userFollowed);
+        userFollowed.addFollower(userFollower);
+
+        userDAO.update(userFollowed);
+        userDAO.update(userFollower);
+
     }
 
-    public void logIn(){
+    public void logIn() {
 
     }
 
-    public void logOut(){
+    public void logOut() {
 
     }
 
     public boolean register(User user) throws UserNotFoundException {
 
-        if (userDAO.findByUsername(user.getUsername()) == null){
+        if (userDAO.findByUsername(user.getUsername()) == null) {
             User u = user;
             u.setRole(Role.USER);
             userDAO.create(user);
@@ -98,6 +104,7 @@ public class UserService {
 
         return false;
     }
+
     public List<User> getAllUsers() throws UserNotFoundException {
         return userDAO.findAll();
     }

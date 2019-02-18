@@ -28,17 +28,18 @@ import static org.junit.Assert.*;
 public class UserServiceTest {
 
     private User user;
-
+    private User user2;
     @Inject
     UserService userService;
 
     @Inject
     UserDAOJPA userDAOJPA;
 
+
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClasses(UserService.class, UsernameTakenException.class, EntityDAO.class,  EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
+                .addClasses(MessageTooLongException.class,  UserService.class, UsernameTakenException.class, EntityDAO.class,  EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
                 .addPackages(true, "org.hibernate")
                 .addAsResource("META-INF/persistence.xml")
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
@@ -55,21 +56,63 @@ public class UserServiceTest {
         user.setWebsite("website");
         user.setBio("yes2");
         userDAOJPA.create(user);
+
+        user2 = new User();
+        user2.setWebsite("42");
+        user2.setUsername("testuser3");
+        user2.setLocation("testlocfsdf2");
+        user2.setRole(Role.USER);
+        user2.setWebsite("website 2");
+        user2.setBio("yes3");
+        userDAOJPA.create(user2);
     }
 
     @Test
     public void editName() throws UserNotFoundException, UsernameTakenException {
         userService.editName("testuser2", "yeah mane");
         assertTrue(userDAOJPA.findByUsername("yeah mane").getUsername().contains("yeah mane"));
+        userService.editName("yeah mane","testuser2" );
 
+    }
+    @Test(expected = UserNotFoundException.class)
+    public void editNameNonExistantUser() throws UserNotFoundException, UsernameTakenException {
+        userService.editName("testusasdasdasdadasder2", "yeah mane");
+    }
+
+    @Test(expected = UsernameTakenException.class)
+    public void editNameAlreadyInUse() throws UserNotFoundException, UsernameTakenException {
+        userService.editName("testuser2", "testuser2");
     }
 
     @Test
-    public void editProfile() {
+    public void editProfile() throws UserNotFoundException, MessageTooLongException {
+        userService.editProfile("testuser2","a different bio","a different location", "a different website");
+        assertTrue(userDAOJPA.findByUsername("testuser2").getBio().contains("a different bio"));
+        assertTrue(userDAOJPA.findByUsername("testuser2").getLocation().contains("a different location"));
+        assertTrue(userDAOJPA.findByUsername("testuser2").getWebsite().contains("a different website"));
+
+    }
+
+    @Test(expected = UserNotFoundException.class)
+    public void editProfileUserNotFound() throws UserNotFoundException, MessageTooLongException {
+        userService.editProfile("testuser2adasdasdasdas","a different bio","a different location", "a different website");
+    }
+    @Test(expected = MessageTooLongException.class)
+    public void editProfileBioTooLong() throws UserNotFoundException, MessageTooLongException {
+        userService.editProfile("testuser2","a different biokajregpjepogjeropgepfpawejgporiejraeoigiopareneognioewjgnjo[aernjgioeJFIOAWEFKPOS;LFKPEASFJGUREGNTROGMEKAFNVRJITRAEMOIBPMAEORPGVMFADOVNTVNMAPEOFAKFJAOGJOJREOGIJAEROGIJAREIOGJAGIOJAREIOGJAREIOGJAEOIRJGIOAJI","a different location", "a different website");
     }
 
     @Test
-    public void follow() {
+    public void follow() throws UserNotFoundException {
+        userService.follow("testuser2","testuser3");
+        assertTrue(userDAOJPA.findByUsername("testuser2").getFollowing().size() > 0);
+        assertTrue(userDAOJPA.findByUsername("testuser3").getFollowers().size() > 0);
+    }
+
+    @Test(expected = UserNotFoundException.class)
+    public void followNonExistantUser() throws UserNotFoundException {
+        userService.follow("testusersfdfsg2","testuser3");
+        userService.follow("testuser2","asdsdafsdf");
     }
 
     @Test

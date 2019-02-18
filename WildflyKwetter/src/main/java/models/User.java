@@ -17,7 +17,7 @@ public class User {
     private String location;
 
 
-    @ManyToMany(cascade = {
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
@@ -27,7 +27,7 @@ public class User {
     )
     private List<User> followers= new ArrayList<>();
 
-    @ManyToMany(cascade = {
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
@@ -46,17 +46,14 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    public boolean addFollower(User u) {
+    public void addFollower(User u) {
         if (!followers.contains(u)) {
             followers.add(u);
-            u.addFollowed(this);
-            return true;
             //TODO: UNFOLLOW MAYBE?
         }
-        return false;
     }
 
-    private void addFollowed(User u) {
+    public void addFollowing(User u) {
         if (!following.contains(u)) {
             following.add(u);
         }
