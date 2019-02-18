@@ -4,6 +4,7 @@ import dao.TweetDAOJPA;
 import dao.UserDAOJPA;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
+import exceptions.UsernameTakenException;
 import models.Tweet;
 import models.User;
 
@@ -22,8 +23,13 @@ public class TweetService {
     UserDAOJPA userDAOJPA;
 
     public void postTweet(String username, String message) throws UserNotFoundException, MessageTooLongException {
+        User user = userDAOJPA.findByUsername(username);
+
+        if(user == null){
+            throw new UserNotFoundException();
+        }
+
         if (message.length() < 160) {
-            User user = userDAOJPA.findByUsername(username);
 
             Date date = new Date();
             date.setTime(Calendar.getInstance().getTimeInMillis());
@@ -37,6 +43,7 @@ public class TweetService {
 
             tweetDAO.update(tweet);
             userDAOJPA.update(user);
+
         } else {
             throw new MessageTooLongException();
         }
@@ -45,7 +52,9 @@ public class TweetService {
     }
 
     public List<Tweet> getTweetsFromUser(String username) throws UserNotFoundException {
-        //todo: organize tweets chronologically
+       if(userDAOJPA.findByUsername(username) == null){
+           throw new UserNotFoundException();
+       }
         return userDAOJPA.getAllTweetsFromUser(username);
     }
 

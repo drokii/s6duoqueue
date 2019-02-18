@@ -56,15 +56,25 @@ public class TweetServiceTest {
         user.setWebsite("website");
         user.setBio("yes");
         userDAO.create(user);
+
+    }
+
+
+    @Test
+    public void getTweetsFromUser() throws MessageTooLongException, UserNotFoundException {
+        tweetService.postTweet("testuser", "dab1");
+        tweetService.postTweet("testuser", "dab2");
+        tweetService.postTweet("testuser", "dab3");
+        tweetService.postTweet("testuser", "dab4");
+        System.out.println(tweetService.getTweetsFromUser("testuser").size());
+        assertTrue(tweetService.getTweetsFromUser("testuser").size() >= 4);
     }
 
     @Test
     public void postTweet() throws UserNotFoundException, MessageTooLongException {
 
-        tweetService.postTweet("testuser", "dab");
-
-        assertTrue(userDAO.findByUsername("testuser").getTweets().get(0).getMessage().contains("dab"));
-        assertTrue(userDAO.getAllTweetsFromUser("testuser").get(0).getMessage().contains("dab"));
+        tweetService.postTweet("testuser", "x");
+        assertTrue(tweetService.lookForTweet("x").size() ==1);
     }
 
     @Test(expected = MessageTooLongException.class)
@@ -80,19 +90,10 @@ public class TweetServiceTest {
 
     }
 
-    @Test
-    public void getTweetsFromUser() throws MessageTooLongException, UserNotFoundException {
-        tweetService.postTweet("testuser", "dab1");
-        tweetService.postTweet("testuser", "dab2");
-        tweetService.postTweet("testuser", "dab3");
-        tweetService.postTweet("testuser", "dab4");
-
-        assertTrue(tweetService.getTweetsFromUser("testuser").size() == 4);
-    }
 
     @Test(expected = UserNotFoundException.class)
     public void getTweetsFromNonexistingUser() throws MessageTooLongException, UserNotFoundException {
-        tweetService.postTweet("testuser", "dab5");
+        tweetService.getTweetsFromUser("dasdasd");
 
     }
 

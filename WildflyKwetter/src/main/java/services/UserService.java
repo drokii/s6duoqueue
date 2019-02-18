@@ -2,6 +2,7 @@ package services;
 
 import dao.UserDAOJPA;
 import exceptions.UserNotFoundException;
+import exceptions.UsernameTakenException;
 import models.Role;
 import models.User;
 
@@ -15,17 +16,22 @@ public class UserService {
     UserDAOJPA userDAO;
 
 
-    public boolean editName(String username, String desired) throws UserNotFoundException {
-        User user = new User();
-        userDAO.findByUsername(username);
+    public void editName(String username, String desired) throws UserNotFoundException, UsernameTakenException {
 
-        if (user.getUsername() != null && userDAO.findByUsername(desired).getUsername() != null) {
-            user.setUsername(desired);
-            userDAO.update(user);
-            return true;
+        User user = userDAO.findByUsername(username);
+
+        if (!user.getUsername().contains(username)){
+            throw new UserNotFoundException();
         }
 
-        return false;
+        if (user.getUsername() != null && userDAO.findByUsername(desired).getUsername() == null) {
+            user.setUsername(desired);
+            userDAO.update(user);
+
+        }else{
+            throw new UsernameTakenException();
+        }
+
     }
 
     public boolean editProfile(String username, String bio, String location, String website) throws UserNotFoundException {

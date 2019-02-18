@@ -38,7 +38,7 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
     }
 
     @Transactional
-    public User findByUsername(String username) throws UserNotFoundException {
+    public User findByUsername(String username) {
 
         List users = em.createQuery("SELECT u FROM User u WHERE u.username=:username")
                 .setParameter("username", username)
@@ -46,10 +46,8 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
 
         if (!users.isEmpty()) {
             return (User) users.get(0);
-        } else {
-            throw new UserNotFoundException();
         }
-
+        return null;
     }
 
     public List<Tweet> getAllTweetsFromUser(String username) throws UserNotFoundException {
