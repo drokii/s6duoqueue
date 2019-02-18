@@ -3,6 +3,11 @@
   <component name="ArquillianContainersManager">
     <container containerId="container.arquillian.managed.wildFly" name="WildFly Managed">
       <maven-library groupId="org.wildfly.arquillian" artifactId="wildfly-arquillian-container-managed" version="RELEASE" />
+      <configurationSpecific>
+        <configurationSpecific enabled="true">
+          <RemoteDebuggerSettingsState port="8787" />
+        </configurationSpecific>
+      </configurationSpecific>
     </container>
   </component>
 </project>

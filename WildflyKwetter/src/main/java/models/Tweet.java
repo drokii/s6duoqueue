@@ -16,7 +16,7 @@ public class Tweet {
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
     private User author;
 
@@ -58,5 +58,9 @@ public class Tweet {
     public int hashCode() {
 
         return Objects.hash(id, message, date);
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }

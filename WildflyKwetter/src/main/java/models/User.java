@@ -1,15 +1,15 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private int id;
+    private Integer id;
     private String username;
     private String password;
     private String bio;
@@ -25,7 +25,7 @@ public class User {
             joinColumns = @JoinColumn(name = "follower_id"),
             inverseJoinColumns = @JoinColumn(name = "followed_id")
     )
-    private List<User> followers;
+    private List<User> followers= new ArrayList<>();
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
@@ -35,10 +35,10 @@ public class User {
             joinColumns = @JoinColumn(name = "followed_id"),
             inverseJoinColumns = @JoinColumn(name = "follower_id")
     )
-    private List<User> following;
+    private List<User> following = new ArrayList<>();
 
-    @OneToMany(mappedBy = "id")
-    private List<Tweet> tweets;
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "author")
+    private List<Tweet> tweets= new ArrayList<>();
 
     public User() {
     }
@@ -129,5 +129,18 @@ public class User {
 
     public Role getRole() {
         return role;
+    }
+
+    public User(String username, String password, String bio, String website, String location) {
+        this.username = username;
+        this.password = password;
+        this.bio = bio;
+        this.website = website;
+        this.location = location;
+        this.role = Role.USER;
+    }
+
+    public void addTweet(Tweet tweet) {
+        tweets.add(tweet);
     }
 }

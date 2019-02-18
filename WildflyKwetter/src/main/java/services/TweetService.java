@@ -1,7 +1,11 @@
 package services;
 
-import dao.TweetDAO;
+import dao.TweetDAOJPA;
+import dao.UserDAOJPA;
+import exceptions.MessageTooLongException;
+import exceptions.UserNotFoundException;
 import models.Tweet;
+import models.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -13,44 +17,49 @@ import java.util.List;
 @Stateless
 public class TweetService {
     @Inject
-    TweetDAO tweetDAO;
+    TweetDAOJPA tweetDAO;
+    @Inject
+    UserDAOJPA userDAOJPA;
 
-    public String postTweet(int poster_id, String message) {
+    public void postTweet(String username, String message) throws UserNotFoundException, MessageTooLongException {
+        if (message.length() < 160) {
+            User user = userDAOJPA.findByUsername(username);
 
-        if (message.length() > 160) {
             Date date = new Date();
             date.setTime(Calendar.getInstance().getTimeInMillis());
+
             Tweet tweet = new Tweet();
             tweet.setDate(date);
             tweet.setMessage(message);
-            tweetDAO.create(tweet);
-            return "Tweet posted!";
+
+            tweet.setAuthor(user);
+            user.addTweet(tweet);
+
+            tweetDAO.update(tweet);
+            userDAOJPA.update(user);
         } else {
-            return "Tweet too long!";
+            throw new MessageTooLongException();
         }
 
+
     }
 
-    public List<Tweet> getTweetsFromUser(int id){
+    public List<Tweet> getTweetsFromUser(String username) throws UserNotFoundException {
         //todo: organize tweets chronologically
-        return tweetDAO.findAllbyUser(id);
+        return userDAOJPA.getAllTweetsFromUser(username);
     }
 
-    public List<Tweet> lookForTweet(String search){
+    public List<Tweet> lookForTweet(String search) {
         List<Tweet> searchResult = new ArrayList<>();
         List<Tweet> tweets = tweetDAO.findAll();
         for (Tweet t :
                 tweets) {
-            if(t.getMessage().contains(search)){
+            if (t.getMessage().contains(search)) {
                 searchResult.add(t);
             }
         }
         return searchResult;
     }
-
-
-
-
 
 
 }

@@ -9,6 +9,8 @@
     <container qualifier="jbossas-managed" default="true">
         <configuration>
             <property name="jbossHome">${C:\Users\Pedro\Downloads\wildfly-15.0.1.Final\wildfly-15.0.1.Final}</property>
+            <property name="allowConnectingToRunningServer">true</property>
+            <property name="modulePath">C:\Users\Pedro\Downloads\wildfly-15.0.1.Final\wildfly-15.0.1.Final\modules</property>
         </configuration>
     </container>
 </arquillian>

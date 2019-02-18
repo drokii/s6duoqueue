@@ -1,6 +1,6 @@
 package services;
 
-import dao.UserDAO;
+import dao.UserDAOJPA;
 import exceptions.UserNotFoundException;
 import models.Role;
 import models.User;
@@ -12,7 +12,8 @@ import java.util.List;
 @Stateless
 public class UserService {
     @Inject
-    UserDAO userDAO;
+    UserDAOJPA userDAO;
+
 
     public boolean editName(String username, String desired) throws UserNotFoundException {
         User user = new User();

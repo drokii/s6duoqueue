@@ -1,29 +1,12 @@
 package dao;
 
-import javax.enterprise.event.Event;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
+import java.util.List;
 
-public abstract class EntityDAO<T> {
-    @Inject
-    protected EntityManager em;
+public interface EntityDAO<T> {
+    void create(T t);
+    void delete(T t);
+    void update(T t);
+    T find(int id);
+    List<T> findAll();
 
-    @Inject
-    protected Event<T> propEventSrc;
-
-    public void create(T t) {
-        em.persist(t);
-        propEventSrc.fire(t);
-    }
-
-    public void delete(T t) {
-        em.remove(t);
-        propEventSrc.fire(t);
-    }
-
-    public void update(T t) {
-        em.merge(t);
-        propEventSrc.fire(t);
-
-    }
 }
