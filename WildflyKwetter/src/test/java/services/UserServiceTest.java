@@ -1,9 +1,8 @@
 package services;
 
 import dao.EntityDAO;
-import dao.EntityDAOJPA;
-import dao.TweetDAOJPA;
-import dao.UserDAOJPA;
+import dao.jpa.EntityDAOJPA;
+import dao.jpa.UserDAOJPA;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
 import exceptions.UsernameTakenException;

@@ -1,5 +1,6 @@
 package dao;
 
+import dao.jpa.UserDAOJPA;
 import models.User;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;

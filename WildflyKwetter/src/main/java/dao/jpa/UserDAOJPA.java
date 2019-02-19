@@ -1,4 +1,4 @@
-package dao;
+package dao.jpa;
 
 import exceptions.UserNotFoundException;
 import models.Tweet;

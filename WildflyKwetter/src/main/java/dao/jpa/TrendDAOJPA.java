@@ -1,7 +1,6 @@
-package dao;
+package dao.jpa;
 
 import models.Trend;
-import models.Tweet;
 
 import javax.ejb.Stateless;
 import javax.persistence.Query;

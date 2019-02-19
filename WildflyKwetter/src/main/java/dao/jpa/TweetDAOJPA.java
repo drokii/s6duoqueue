@@ -1,12 +1,9 @@
-package dao;
+package dao.jpa;
 
 import models.Tweet;
-import models.User;
 
 import javax.ejb.Stateless;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
 
 @Stateless

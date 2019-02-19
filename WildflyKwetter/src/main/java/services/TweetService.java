@@ -1,10 +1,9 @@
 package services;
 
-import dao.TweetDAOJPA;
-import dao.UserDAOJPA;
+import dao.jpa.TweetDAOJPA;
+import dao.jpa.UserDAOJPA;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
-import exceptions.UsernameTakenException;
 import models.Tweet;
 import models.User;
 

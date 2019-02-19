@@ -1,4 +1,6 @@
-package dao;
+package dao.jpa;
+
+import dao.EntityDAO;
 
 import javax.enterprise.event.Event;
 import javax.inject.Inject;

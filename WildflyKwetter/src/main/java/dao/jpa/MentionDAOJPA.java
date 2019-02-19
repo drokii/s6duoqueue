@@ -1,7 +1,6 @@
-package dao;
+package dao.jpa;
 
 import models.Mention;
-import models.Tweet;
 
 import javax.persistence.Query;
 import java.util.List;
