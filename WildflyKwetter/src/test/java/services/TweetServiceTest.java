@@ -87,21 +87,18 @@ public class TweetServiceTest {
     @Test(expected = UserNotFoundException.class)
     public void postTweetFailureUserNonexisting() throws MessageTooLongException, UserNotFoundException {
         tweetService.postTweet("doesntexist", "dab");
-
     }
 
 
     @Test(expected = UserNotFoundException.class)
     public void getTweetsFromNonexistingUser() throws MessageTooLongException, UserNotFoundException {
         tweetService.getTweetsFromUser("dasdasd");
-
     }
 
     @Test
     public void lookForTweet() throws MessageTooLongException, UserNotFoundException {
         tweetService.postTweet("testuser", "look for this");
         tweetService.postTweet("testuser", "this is something to look for");
-
         assertTrue(tweetService.lookForTweet("this").size() == 2);
     }
 }

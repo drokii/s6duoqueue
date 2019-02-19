@@ -15,9 +15,7 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
 
     public UserDAOJPA() {
     }
-
     @Override
-    @Transactional
     public List<User> findAll() {
         List users = em.createQuery("SELECT u FROM User u").getResultList();
         if (users.isEmpty()) {
@@ -30,15 +28,18 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
         return users;
     }
 
-
     @Override
-    @Transactional
-    public User find(int id) {
-        return em.find(User.class, id);
+    public User find(int id) throws UserNotFoundException {
+        User user =em.find(User.class, id);
+        if (user != null){
+            return user;
+        }else{
+            throw new UserNotFoundException();
+        }
+
     }
 
-    @Transactional
-    public User findByUsername(String username) {
+    public User findByUsername(String username) throws UserNotFoundException {
 
         List users = em.createQuery("SELECT u FROM User u WHERE u.username=:username")
                 .setParameter("username", username)
@@ -47,7 +48,9 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
         if (!users.isEmpty()) {
             return (User) users.get(0);
         }
-        return null;
+        else{
+            throw new UserNotFoundException();
+        }
     }
 
     public List<Tweet> getAllTweetsFromUser(String username) throws UserNotFoundException {

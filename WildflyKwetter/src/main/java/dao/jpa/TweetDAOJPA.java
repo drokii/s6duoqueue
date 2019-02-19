@@ -1,9 +1,9 @@
 package dao.jpa;
 
+import exceptions.TweetNotFoundException;
 import models.Tweet;
 
 import javax.ejb.Stateless;
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Stateless
@@ -13,18 +13,21 @@ public class TweetDAOJPA extends EntityDAOJPA<Tweet> {
     }
 
     @Override
-    @Transactional
-    public Tweet find(int id) {
-        return em.find(Tweet.class, id);
+    public Tweet find(int id) throws TweetNotFoundException {
+        Tweet tweet = em.find(Tweet.class, id);
+        if (tweet != null){
+            return tweet;
+        }else{
+            throw new TweetNotFoundException();
+        }
+
     }
 
     @Override
-    @Transactional
     public List<Tweet> findAll() {
         List tweets = em.createQuery("SELECT t FROM Tweet t").getResultList();
         return tweets;
     }
-
 
 
 }
