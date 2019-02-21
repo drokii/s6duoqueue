@@ -6,10 +6,12 @@ import models.User;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Startup
 @Singleton
 public class DAORepository {
 
@@ -20,6 +22,11 @@ public class DAORepository {
     public void init() throws IOException {
        users = new ArrayList<>();
        tweets = new ArrayList<>();
+    }
+
+    public static void clear(){
+        users.clear();
+        tweets.clear();
     }
 
 

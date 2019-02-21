@@ -1,6 +1,7 @@
 package dao.memory;
 
 import dao.EntityDAO;
+import exceptions.UserNotFoundException;
 import models.User;
 
 import javax.ejb.DependsOn;
@@ -13,6 +14,7 @@ public class UserDAOMemory implements EntityDAO<User> {
     DAORepository repository;
     @Override
     public void create(User user) {
+        user.setId(repository.getUsers().size());
         repository.getUsers().add(user);
     }
 
@@ -27,12 +29,27 @@ public class UserDAOMemory implements EntityDAO<User> {
     }
 
     @Override
-    public User find(int id) {
-        return repository.getUsers().get(id);
+    public User find(int id) throws UserNotFoundException {
+        try{
+            return repository.getUsers().get(id);
+        }catch(IndexOutOfBoundsException e){
+            throw new UserNotFoundException();
+        }
+
     }
 
     @Override
     public List<User> findAll() {
         return repository.getUsers();
+    }
+
+    public User findByUsername(String username) throws UserNotFoundException {
+        for (User user: repository.getUsers()
+             ) {
+            if(user.getUsername().equals(username)){
+                return user;
+            }
+        }
+        throw  new UserNotFoundException();
     }
 }

@@ -1,6 +1,8 @@
 package dao.memory;
 
 import dao.EntityDAO;
+import exceptions.TweetNotFoundException;
+import exceptions.UserNotFoundException;
 import models.Trend;
 import models.Tweet;
 
@@ -15,6 +17,7 @@ public class TweetDAOMemory implements EntityDAO<Tweet>{
 
     @Override
     public void create(Tweet tweet) {
+        tweet.setId(repository.getTweets().size());
         repository.getTweets().add(tweet);
     }
 
@@ -29,8 +32,16 @@ public class TweetDAOMemory implements EntityDAO<Tweet>{
     }
 
     @Override
-    public Tweet find(int id) {
-        return repository.getTweets().get(id);
+    public Tweet find(int id) throws TweetNotFoundException {
+        try{
+            Tweet tweet = repository.getTweets().get(id);
+            return tweet;
+        }catch (IndexOutOfBoundsException e){
+            throw new TweetNotFoundException();
+        }
+
+
+
     }
 
     @Override

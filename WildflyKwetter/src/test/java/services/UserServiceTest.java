@@ -4,6 +4,7 @@ import dao.EntityDAO;
 import dao.jpa.EntityDAOJPA;
 import dao.jpa.UserDAOJPA;
 import exceptions.MessageTooLongException;
+import exceptions.TweetNotFoundException;
 import exceptions.UserNotFoundException;
 import exceptions.UsernameTakenException;
 import models.Role;
@@ -38,7 +39,7 @@ public class UserServiceTest {
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClasses(MessageTooLongException.class,  UserService.class, UsernameTakenException.class, EntityDAO.class,  EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
+                .addClasses(TweetNotFoundException.class, MessageTooLongException.class,  UserService.class, UsernameTakenException.class, EntityDAO.class,  EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
                 .addPackages(true, "org.hibernate")
                 .addAsResource("META-INF/persistence.xml")
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
@@ -131,6 +132,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void getAllUsers() {
+    public void getAllUsers() throws UserNotFoundException {
+        assertTrue(!userService.getAllUsers().isEmpty());
     }
 }
