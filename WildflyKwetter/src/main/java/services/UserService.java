@@ -105,8 +105,12 @@ public class UserService {
         return false;
     }
 
-    public List<User> getAllUsers() throws UserNotFoundException {
+    public List<User> getAllUsers() {
         return userDAO.findAll();
+    }
+
+    public User getUserByUsername(String username) throws UserNotFoundException {
+        return userDAO.findByUsername(username);
     }
 
 }

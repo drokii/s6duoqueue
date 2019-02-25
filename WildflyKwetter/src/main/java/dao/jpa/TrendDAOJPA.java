@@ -6,7 +6,6 @@ import javax.ejb.Stateless;
 import javax.persistence.Query;
 import java.util.List;
 
-@Stateless
 public class TrendDAOJPA extends EntityDAOJPA<Trend> {
     public TrendDAOJPA() {
     }

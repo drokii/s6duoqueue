@@ -91,6 +91,8 @@ public class UserDAOMemoryTest {
     }
 
     @Test
-    public void findByUsername() {
+    public void findByUsername() throws UserNotFoundException {
+        assertTrue(userDAOMemory.findByUsername("username0").getUsername().contains("username0" +
+                ""));
     }
 }

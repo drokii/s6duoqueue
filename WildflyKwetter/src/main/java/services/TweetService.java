@@ -9,6 +9,8 @@ import models.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,6 +22,7 @@ public class TweetService {
     TweetDAOJPA tweetDAO;
     @Inject
     UserDAOJPA userDAOJPA;
+
 
     public void postTweet(String username, String message) throws UserNotFoundException, MessageTooLongException {
         User user = userDAOJPA.findByUsername(username);
