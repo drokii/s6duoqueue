@@ -5,6 +5,7 @@ import dao.jpa.EntityDAOJPA;
 import dao.jpa.TweetDAOJPA;
 import dao.jpa.UserDAOJPA;
 import exceptions.MessageTooLongException;
+import exceptions.TweetNotFoundException;
 import exceptions.UserNotFoundException;
 import models.Role;
 import models.Tweet;
@@ -39,7 +40,7 @@ public class TweetServiceTest {
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClasses(MessageTooLongException.class, EntityDAO.class, TweetService.class, TweetDAOJPA.class, EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
+                .addClasses(TweetNotFoundException.class, MessageTooLongException.class, EntityDAO.class, TweetService.class, TweetDAOJPA.class, EntityDAOJPA.class, UserDAOJPA.class, Tweet.class, User.class, Role.class, GenericProducer.class, UserNotFoundException.class)
                 .addPackages(true, "org.hibernate")
                 .addAsResource("META-INF/persistence.xml")
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
