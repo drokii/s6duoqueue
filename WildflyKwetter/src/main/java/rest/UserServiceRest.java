@@ -12,8 +12,9 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("user")
+
 @Produces({"application/json"})
+@Path("user")
 public class UserServiceRest {
 
     @Inject
@@ -37,9 +38,11 @@ public class UserServiceRest {
     @Path("/getusers")
     public Response getAllUsers() {
 
+
         List<User> user = userService.getAllUsers();
         Gson gson = new Gson();
         String output = gson.toJson(user);
+
         return Response.status(200).entity(output).build();
 
     }
@@ -87,7 +90,6 @@ public class UserServiceRest {
 
 
     }
-
 
 
 }

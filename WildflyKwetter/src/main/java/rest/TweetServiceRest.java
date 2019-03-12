@@ -11,9 +11,10 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("tweet")
+
 @Produces({"application/json"})
 @Consumes({"application/json"})
+@Path("tweet")
 public class TweetServiceRest {
 
     @Inject
