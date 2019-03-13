@@ -1,4 +1,5 @@
-package presenters.managers;
+package presenters;
+
 import dao.jpa.ServiceBean;
 import models.SimpleProperty;
 import repo.RepositoryManager;

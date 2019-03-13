@@ -23,16 +23,12 @@ public class UserServiceRest {
     @GET
     @Path("/getuser/{username}")
     public Response getUser(@PathParam("username") String username) {
-        try {
-            User user = userService.getUserByUsername(username);
-            Gson gson = new Gson();
-            String output = gson.toJson(user);
-            return Response.status(200).entity(output).build();
-
-        } catch (UserNotFoundException e) {
-            return Response.status(200).entity("This user doesn't exist.").build();
-        }
+        User user = userService.getUserByUsername(username);
+        Gson gson = new Gson();
+        String output = gson.toJson(user);
+        return Response.status(200).entity(output).build();
     }
+
 
     @GET
     @Path("/getusers")
@@ -42,7 +38,6 @@ public class UserServiceRest {
         List<User> user = userService.getAllUsers();
         Gson gson = new Gson();
         String output = gson.toJson(user);
-
         return Response.status(200).entity(output).build();
 
     }

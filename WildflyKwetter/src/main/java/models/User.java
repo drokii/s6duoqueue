@@ -43,7 +43,7 @@ public class User {
     public User() {
     }
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     private Role role;
 
     public void addFollower(User u) {

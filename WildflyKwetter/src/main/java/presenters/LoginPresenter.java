@@ -1,4 +1,4 @@
-package presenters.managers;
+package presenters;
 
 import javax.enterprise.inject.Model;
 

@@ -92,8 +92,7 @@ public class UserService {
     }
 
     public boolean promoteUserToModerator(String username) throws UserNotFoundException {
-        User user = new User();
-        userDAO.findByUsername(username);
+        User user = userDAO.findByUsername(username);
 
         if (user.getUsername() != null) {
 
@@ -109,8 +108,11 @@ public class UserService {
         return userDAO.findAll();
     }
 
-    public User getUserByUsername(String username) throws UserNotFoundException {
+    public User getUserByUsername(String username) {
         return userDAO.findByUsername(username);
     }
 
+    public void deleteUser(String username) throws UserNotFoundException {
+            userDAO.delete(getUserByUsername(username));
+    }
 }
