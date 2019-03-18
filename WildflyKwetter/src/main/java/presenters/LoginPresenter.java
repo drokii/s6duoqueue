@@ -1,5 +1,6 @@
 package presenters;
 
+import models.Role;
 import presenters.helper.LogInRequest;
 import services.UserService;
 
@@ -31,7 +32,7 @@ public class LoginPresenter {
     public String login(LogInRequest request) throws IOException {
         System.out.println("logging in");
 
-        if(userService.logIn(request.getUsername(),request.getPassword())){
+        if(userService.logIn(request.getUsername(),request.getPassword()) && userService.getUserByUsername(request.getUsername()).getRole() == Role.ADMIN){
             return "admin";
         }
         else return null;
