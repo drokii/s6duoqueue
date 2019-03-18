@@ -3,6 +3,7 @@ package models;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class User {
@@ -139,5 +140,27 @@ public class User {
 
     public void addTweet(Tweet tweet) {
         tweets.add(tweet);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(bio, user.bio) &&
+                Objects.equals(website, user.website) &&
+                Objects.equals(location, user.location) &&
+                Objects.equals(followers, user.followers) &&
+                Objects.equals(following, user.following) &&
+                Objects.equals(tweets, user.tweets) &&
+                role == user.role;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, bio, website, location, followers, following, tweets, role);
     }
 }
