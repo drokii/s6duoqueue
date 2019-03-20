@@ -7,54 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/presenters/helper/LogInRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kwetter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kwetter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/jpa/UserDAOJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/jpa/UserDAOJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/memory/DAORepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/memory/DAORepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/SimpleProperty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenters/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repo/RepositoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repo/RepositoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/TweetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TweetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginadmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginadmin.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/start.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/ServiceBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/jpa/ServiceBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/UserDAOJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/jpa/UserDAOJPA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/memory/DAORepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/memory/DAORepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/SimpleProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presenters/AdminPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presenters/AdminPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presenters/LoginPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/presenters/LoginPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presenters/Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repo/RepositoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repo/RepositoryManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TweetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TweetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/ServiceBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/ServiceBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/UserDAOJPA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/UserDAOJPA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/memory/DAORepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/memory/DAORepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/SimpleProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/AdminPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/AdminPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/LoginPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/LoginPresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/repo/RepositoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/repo/RepositoryManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/TweetService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/TweetService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/start.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test-persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
+            <state relative-caret-position="275">
+              <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1230#1231#0" expanded="true" />
@@ -141,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="79" column="12" lean-forward="true" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
+            <state relative-caret-position="459">
+              <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -153,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="263">
+              <caret line="31" column="66" lean-forward="true" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -233,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dao/UserDAOJPA.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/EntityDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/memory/Trend.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/memory/TrendDAOMemory.java" />
@@ -276,14 +230,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/loginadmin.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/TweetService.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/presenters/helper/Converter.java" />
         <option value="$PROJECT_DIR$/src/main/java/presenters/helper/UserConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/presenters/LoginAdminPanelPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" />
       </list>
     </option>
   </component>
@@ -447,7 +402,7 @@
     <property name="SearchEverywhereHistoryKey" value="ServiceBean&#9;PSI&#9;JAVA://javax.management.relation.RelationServiceMBean" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552916662425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552917560509" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -777,7 +732,7 @@
       <workItem from="1551084889725" duration="16748000" />
       <workItem from="1552402583174" duration="1005000" />
       <workItem from="1552475604224" duration="16119000" />
-      <workItem from="1552899396764" duration="16849000" />
+      <workItem from="1552899396764" duration="17698000" />
     </task>
     <servers />
   </component>
@@ -814,7 +769,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139844000" />
+    <option name="totallyTimeSpent" value="140693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1254,17 +1209,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/loginadmin.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="61" column="65" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="65" />
+          <folding>
+            <element signature="n#h:head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="263">
+          <caret line="31" column="66" lean-forward="true" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
+        <state relative-caret-position="275">
+          <caret line="87" column="32" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1230#1231#0" expanded="true" />
@@ -1280,23 +1252,6 @@
             <element signature="e#928#929#0" expanded="true" />
             <element signature="e#960#961#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/loginadmin.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="61" column="65" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="65" />
-          <folding>
-            <element signature="n#h:head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="79" column="12" lean-forward="true" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
         </state>
       </provider>
     </entry>
