@@ -23,7 +23,7 @@ public abstract class EntityDAOJPA<T> implements EntityDAO<T> {
 
     public void delete(T t) {
 
-        em.remove(t);
+        em.remove(em.contains(t) ? t : em.merge(t));
 
         propEventSrc.fire(t);
     }
