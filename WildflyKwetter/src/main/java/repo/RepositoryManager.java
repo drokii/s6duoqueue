@@ -1,6 +1,6 @@
 package repo;
 
-import models.SimpleProperty;
+import presenters.helper.LogInRequest;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -12,10 +12,10 @@ public class RepositoryManager {
     @Inject
     private EntityManager em;
 
-    public List<SimpleProperty> queryCache(){
+    public List<LogInRequest> queryCache(){
         Query query = em.createQuery("FROM SimpleProperty");
 
-        List <SimpleProperty> list =  query.getResultList();
+        List <LogInRequest> list =  query.getResultList();
         return list;
     }
 }

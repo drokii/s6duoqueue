@@ -59,7 +59,7 @@ public class UserService {
         User userFollower = userDAO.findByUsername(follower);
         User userFollowed = userDAO.findByUsername(followed);
 
-        if(userFollowed == null || userFollower == null){
+        if (userFollowed == null || userFollower == null) {
             throw new UserNotFoundException();
         }
 
@@ -71,8 +71,14 @@ public class UserService {
 
     }
 
-    public void logIn() {
-
+    public boolean logIn(String username, String password) {
+        User user = userDAO.findByUsername(username);
+        System.out.println("checking");
+        if (user == null || !password.equals(user.getPassword())) {
+            System.out.println("password or user not good");
+            return false;
+        }
+        return true;
     }
 
     public void logOut() {
@@ -113,6 +119,10 @@ public class UserService {
     }
 
     public void deleteUser(String username) throws UserNotFoundException {
-            userDAO.delete(getUserByUsername(username));
+        userDAO.delete(getUserByUsername(username));
+    }
+
+    public User getUserById(int valueOf) throws UserNotFoundException {
+        return userDAO.find(valueOf);
     }
 }

@@ -1,6 +1,6 @@
 package dao.jpa;
 
-import models.SimpleProperty;
+import presenters.helper.LogInRequest;
 
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
@@ -12,20 +12,20 @@ import javax.persistence.Query;
 public class ServiceBean {
 
     @Inject
-    private Event<SimpleProperty> propEventSrc;
+    private Event<LogInRequest> propEventSrc;
 
     @Inject
     private EntityManager em;
 
 
-    public void put(SimpleProperty p){
+    public void put(LogInRequest p){
         em.persist(p);
         propEventSrc.fire(p);
     }
 
-    public void delete(SimpleProperty p){
+    public void delete(LogInRequest p){
 
-        Query query = em.createQuery("delete FROM SimpleProperty p where p.key='"+p.getKey()+"'");
+        Query query = em.createQuery("delete FROM SimpleProperty p where p.key='"+p.getUsername()+"'");
         query.executeUpdate();
         propEventSrc.fire(p);
     }

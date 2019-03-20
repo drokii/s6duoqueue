@@ -1,6 +1,5 @@
 package dao.memory;
 
-import models.SimpleProperty;
 import models.Tweet;
 import models.User;
 
