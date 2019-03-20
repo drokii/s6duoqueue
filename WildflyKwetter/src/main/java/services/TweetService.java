@@ -73,7 +73,4 @@ public class TweetService {
     }
 
 
-    public void delete(Tweet tweet) {
-        tweetDAO.delete(tweet);
-    }
 }

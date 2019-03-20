@@ -36,17 +36,12 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
     }
 
     public User findByUsername(String username){
-    try{
+
         List users = em.createQuery("SELECT u FROM User u WHERE u.username=:username")
                 .setParameter("username", username)
                 .getResultList();
 
         return (User) users.get(0);
-    }
-    catch (Exception e){
-        return null;
-    }
-
 
     }
 
