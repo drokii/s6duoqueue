@@ -99,6 +99,12 @@ public class AdminPresenter {
             System.out.println(user.getRole().toString());
         }
 
+        User user = new User("test", "test", "bio" , "website" , " location" );
+        user.setRole(Role.ADMIN);
+        userDAOJPA.create(user);
+        tweetService.postTweet("test", "YAS QUEEN");
+        System.out.println(user.getRole().toString());
+
     }
     public void debugRoles(){
         System.out.println(users.size());
