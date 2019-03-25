@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ejb" name="JEA4Kwetter:ejb exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/JEA4Kwetter_ejb_exploded</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="JEA4Kwetter/ejb/EJB" />
-      <element id="module-output" name="JEA4Kwetter" />
-    </root>
-  </artifact>
-</component>
