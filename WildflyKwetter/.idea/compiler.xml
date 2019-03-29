@@ -10,8 +10,5 @@
         <module name="WildflyKwetter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="kwetter" target="7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

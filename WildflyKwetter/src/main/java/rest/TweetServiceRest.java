@@ -4,11 +4,14 @@ import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
 import models.Tweet;
+import models.User;
 import services.TweetService;
+import services.UserService;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,6 +23,9 @@ public class TweetServiceRest {
     @Inject
     TweetService tweetService;
 
+    @Inject
+    UserService userService;
+
     @GET
     @Path("/gettweets/{username}")
     public Response getTweetsFrom(@PathParam("username") String username) {
@@ -28,6 +34,28 @@ public class TweetServiceRest {
             List<Tweet> tweetList = tweetService.getTweetsFromUser(username);
             Gson gson = new Gson();
             String output = gson.toJson(tweetList);
+            return Response.status(200).entity(output).build();
+
+        } catch (UserNotFoundException e) {
+            return Response.status(200).entity("This user doesn't exist.").build();
+        }
+
+    }
+
+    @GET
+    @Path("/gettweets/{username}")
+    public Response getTweetsFromFollowers(@PathParam("username") String username) {
+        List<Tweet> allTweets = new ArrayList<>();
+        List<Tweet> tweetList = new ArrayList<>();
+        try {
+
+            for (User follower: userService.getUserByUsername(username).getFollowers()){
+               tweetList = tweetService.getTweetsFromUser(username);
+               allTweets.addAll(tweetList);
+            }
+
+            Gson gson = new Gson();
+            String output = gson.toJson(allTweets);
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
