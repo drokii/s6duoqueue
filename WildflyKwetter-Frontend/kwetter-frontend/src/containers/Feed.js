@@ -32,14 +32,10 @@ class Feed extends Component {
             })
     }
 
-    
-        
-    
-
     render() {
           
         const tweets = this.state.tweets.map(tweet => {
-            return <Tweet author={tweet.author} message={tweet.message} date={tweet.date} randomProfilePicture={"https://random.birb.pw/tweet/random"}  />;
+            return <Tweet author={tweet.author} message={tweet.message} date={tweet.date} randomProfilePicture={"https://i.imgur.com/3Gw4MkV.png"}  />;
         });
 
         return (

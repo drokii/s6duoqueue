@@ -7,56 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App/components/Appbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/InputTweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/InputTweet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/Tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/Tweet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/redux.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/registerServiceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kwetter_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/kwetter_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_omnifaces_omnifaces_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/EntityDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/EntityDAOJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/MentionDAOJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/TrendDAOJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/TweetDAOJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/jpa/UserDAOJPA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/memory/DAORepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/memory/TweetDAOMemory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/memory/UserDAOMemory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/MessageTooLongException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/TweetNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/UserNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/UsernameTakenException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Mention.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Trend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Tweet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presenters/AdminPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/presenters/LoginPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repo/GenericProducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest/TweetServiceRest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest/UserServiceRest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/MentionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TrendService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/TweetService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/UserService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,28 +42,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/TweetService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="65" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="816">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,19 +66,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="1578">
+              <caret line="145" column="37" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/services/UserServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="340">
+              <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -133,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
+            <state relative-caret-position="833">
               <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
             </state>
           </provider>
@@ -274,7 +236,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2029" />
     <option name="y" value="-21" />
     <option name="width" value="1023" />
@@ -289,6 +251,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,49 +283,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="jpa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="presenters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="presenters" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oof" type="b2602c69:ProjectViewProjectNode" />
@@ -466,7 +387,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,7 +397,7 @@
     <property name="SearchEverywhereHistoryKey" value="ServiceBean&#9;PSI&#9;JAVA://javax.management.relation.RelationServiceMBean" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553808992259" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554113879795" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -538,7 +458,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss Server.JBoss 15.0.1.Final">
+  <component name="RunManager" selected="Arquillian JUnit.WildFly Managed: UserServiceTest">
     <configuration name="WildFly Managed: TweetServiceRestTest.getTweetsFrom" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
       <module name="kwetter" />
       <extension name="coverage">
@@ -778,13 +698,11 @@
       <workItem from="1553091460357" duration="115000" />
       <workItem from="1553169219039" duration="6462000" />
       <workItem from="1553796722489" duration="2425000" />
+      <workItem from="1554113143254" duration="1161000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WildFly_Managed__UserServiceTest - 2019.03.13 at 15h 37m 09s.xml">
-      <configuration name="WildFly Managed: UserServiceTest" configurationId="ArquillianJUnit" />
-    </history-entry>
     <history-entry file="WildFly_Managed__UserServiceTest - 2019.03.20 at 13h 00m 28s.xml">
       <configuration name="WildFly Managed: UserServiceTest" configurationId="ArquillianJUnit" />
     </history-entry>
@@ -812,14 +730,17 @@
     <history-entry file="WildFly_Managed__UserServiceTest_promoteUserToModerator - 2019.03.13 at 15h 31m 30s.xml">
       <configuration name="WildFly Managed: UserServiceTest.promoteUserToModerator" configurationId="ArquillianJUnit" />
     </history-entry>
+    <history-entry file="WildFly_Managed__UserServiceTest - 2019.04.01 at 12h 16m 58s.xml">
+      <configuration name="WildFly Managed: UserServiceTest" configurationId="ArquillianJUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156328000" />
+    <option name="totallyTimeSpent" value="157489000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="2029" y="-21" width="1023" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.141258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27829698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -830,7 +751,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40471092" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40809628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -838,7 +759,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32869378" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32441112" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32394367" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32976446" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
@@ -1069,13 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="145" column="37" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -1087,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,15 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/services/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,32 +1018,8 @@
       <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repo/RepositoryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/repo/RepositoryManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1185,9 +1065,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/TweetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="65" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/presenters/LoginPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
+        <state relative-caret-position="833">
           <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
         </state>
       </provider>
@@ -1220,41 +1121,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/TweetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/arquillian.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="595">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="323">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/services/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1578">
+          <caret line="145" column="37" selection-start-line="145" selection-start-column="37" selection-end-line="145" selection-end-column="37" />
         </state>
       </provider>
     </entry>
