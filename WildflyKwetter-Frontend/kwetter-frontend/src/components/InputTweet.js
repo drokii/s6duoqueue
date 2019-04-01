@@ -18,11 +18,11 @@ class InputTweet extends React.Component {
 
     render() {
         return (
-            <div style={{ padding: 12, minWidth: '50vw' }} >
+            <div style={{ padding: 12, minWidth: '35vw' }} >
                 <Card display="flex" >
                     <div>
                         <CardContent display="flex" style={{ verticalAlign: "middle" }} >
-                            <TextField multiline style={{ verticalAlign: "middle", minWidth: '40vw' }} label="Share your thoughts." value={this.state.message} onChange={this.handleChange('message')} ></TextField>
+                            <TextField multiline style={{ verticalAlign: "middle", minWidth: '35vw' }} label="Share your thoughts." value={this.state.message} onChange={this.handleChange('message')} ></TextField>
                         </CardContent>
                     </div>
                     <div style={{ margin: 20 }} >

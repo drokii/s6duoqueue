@@ -7,10 +7,10 @@ import Avatar from '@material-ui/core/Avatar';
 const Tweet = (props) => {
 
     return (
-        <div style={{ padding: 12 , minWidth: '50vw'}} >
+        <div style={{ padding: 12 , minWidth: '30vw'}} >
             <Card display="flex"  >
                 <div>
-                    <CardContent display="flex" style={{ padding: 6 }} >
+                    <CardContent display="flex" >
                         <Avatar style={{ display: "inline-block", verticalAlign: "middle", marginRight:12 }} src={props.randomProfilePicture} />
                             <h4 style={{ display: "inline-block"}}>{props.author}</h4>
                     </CardContent>
@@ -21,7 +21,6 @@ const Tweet = (props) => {
                     </p>
                     <i>Posted around: {props.date}</i>
                 </div>
-
             </Card>
         </div>
     )
