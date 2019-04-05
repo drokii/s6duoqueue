@@ -1,7 +1,6 @@
 package rest;
 
 import auth.Secured;
-import auth.requests.GetTweetsRequest;
 import auth.requests.PostTweetRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
@@ -31,11 +30,11 @@ public class TweetServiceRest {
     UserService userService;
 
     @GET
-    @Path("/from")
-    public Response getTweetsFrom(GetTweetsRequest request) {
+    @Path("/get/{username}")
+    public Response getTweetsFrom(@PathParam("username") String username) {
         try {
 
-            List<Tweet> tweetList = tweetService.getTweetsFromUser(request.getUsername());
+            List<Tweet> tweetList = tweetService.getTweetsFromUser(username);
             Gson gson = new Gson();
             String output = gson.toJson(tweetList);
             return Response.status(200).entity(output).build();
@@ -48,12 +47,12 @@ public class TweetServiceRest {
 
     @GET
     @Path("/followers/{username}")
-    public Response getTweetsFromFollowers(GetTweetsRequest request) {
+    public Response getTweetsFromFollowers(@PathParam("username") String username) {
         List<Tweet> allTweets = new ArrayList<>();
         List<Tweet> tweetList;
         try {
 
-            for (User follower: userService.getUserByUsername(request.getUsername()).getFollowers()){
+            for (User follower: userService.getUserByUsername(username).getFollowers()){
                tweetList = tweetService.getTweetsFromUser(follower.getUsername());
                allTweets.addAll(tweetList);
             }

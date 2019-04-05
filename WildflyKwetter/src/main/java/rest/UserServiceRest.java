@@ -3,7 +3,6 @@ package rest;
 import auth.Secured;
 import auth.requests.EditUserRequest;
 import auth.requests.FollowRequest;
-import auth.requests.GetUserRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -14,7 +13,6 @@ import services.UserService;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 
 @Produces({"application/json"})
@@ -25,9 +23,9 @@ public class UserServiceRest {
     UserService userService;
 
     @GET
-    @Path("/getuser")
-    public Response getUser(GetUserRequest request) {
-        User user = userService.getUserByUsername(request.getUsername());
+    @Path("/{username}")
+    public Response getUser(@PathParam("username") String username) {
+        User user = userService.getUserByUsername(username);
         user.setPassword("");
         Gson gson = new Gson();
         String output = gson.toJson(user);
