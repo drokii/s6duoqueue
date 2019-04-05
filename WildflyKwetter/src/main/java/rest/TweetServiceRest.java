@@ -1,5 +1,7 @@
 package rest;
 
+import auth.Secured;
+import auth.requests.PostTweetRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -27,7 +29,7 @@ public class TweetServiceRest {
     UserService userService;
 
     @GET
-    @Path("/gettweets/{username}")
+    @Path("/{username}")
     public Response getTweetsFrom(@PathParam("username") String username) {
         try {
 
@@ -43,7 +45,8 @@ public class TweetServiceRest {
     }
 
     @GET
-    @Path("/gettweets/{username}")
+    @Secured
+    @Path("/followers/{username}")
     public Response getTweetsFromFollowers(@PathParam("username") String username) {
         List<Tweet> allTweets = new ArrayList<>();
         List<Tweet> tweetList = new ArrayList<>();
@@ -65,10 +68,11 @@ public class TweetServiceRest {
     }
 
     @POST
+    @Secured
     @Path("/post")
-    public Response postTweet(@FormParam("username") String username, @FormParam("message") String message) {
+    public Response postTweet(PostTweetRequest request) {
         try {
-            tweetService.postTweet(username, message);
+            tweetService.postTweet(request.getUsername(), request.getMessage());
             return Response.status(200).entity("Tweet Posted!").build();
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();
@@ -78,8 +82,8 @@ public class TweetServiceRest {
     }
 
     @GET
-    @Path("/search/{search}")
-    public Response postTweet(@PathParam("search") String search) {
+    @Path("/{search}")
+    public Response searchTweet(@PathParam("search") String search) {
 
         List<Tweet> tweetList = tweetService.lookForTweet(search);
 

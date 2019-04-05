@@ -45,17 +45,17 @@
     </style>
 </h:head>
 <h:body>
-    <h2>Example Java EE 8 Application</h2>
+    <h2>Kwetter Admin Panel</h2>
     <h:form id="jsfexample">
-        <h:panelGrid columns="2" styleClass="default" value="#{loginRequest}" var="logInRequest">
+        <h:panelGrid columns="2" styleClass="default">
 
             <h:outputText value="User Name:"/>
-            <h:inputText value="#{loginRequest.username}"/>
+            <h:inputText value="#{loginPresenter.username}"/>
 
             <h:outputText value="Password:"/>
-            <h:inputText value="#{loginRequest.password}"/>
+            <h:inputText value="#{loginPresenter.password}"/>
 
-            <h:commandButton action="#{loginPresenter.login(loginRequest)}"
+            <h:commandButton action="#{loginPresenter.login()}"
                              styleClass="buttons" value="Log In"/>
             <h:messages/>
         </h:panelGrid>

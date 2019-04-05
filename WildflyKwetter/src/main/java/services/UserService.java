@@ -71,12 +71,12 @@ public class UserService {
 
     }
 
-    public boolean logIn(String username, String password) {
+    public boolean logIn(String username, String password) throws Exception {
         User user = userDAO.findByUsername(username);
-        System.out.println("checking");
+
         if (user == null || !password.equals(user.getPassword())) {
             System.out.println("password or user not good");
-            return false;
+            throw new Exception(); //todo add specific exception handling
         }
         return true;
     }
