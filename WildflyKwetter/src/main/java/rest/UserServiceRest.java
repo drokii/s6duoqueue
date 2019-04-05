@@ -1,5 +1,9 @@
 package rest;
 
+import auth.Secured;
+import auth.requests.EditUserRequest;
+import auth.requests.FollowRequest;
+import auth.requests.GetUserRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -21,32 +25,21 @@ public class UserServiceRest {
     UserService userService;
 
     @GET
-    @Path("/getuser/{username}")
-    public Response getUser(@PathParam("username") String username) {
-        User user = userService.getUserByUsername(username);
+    @Path("/getuser")
+    public Response getUser(GetUserRequest request) {
+        User user = userService.getUserByUsername(request.getUsername());
+        user.setPassword("");
         Gson gson = new Gson();
         String output = gson.toJson(user);
         return Response.status(200).entity(output).build();
-    }
-
-
-    @GET
-    @Path("/getusers")
-    public Response getAllUsers() {
-
-
-        List<User> user = userService.getAllUsers();
-        Gson gson = new Gson();
-        String output = gson.toJson(user);
-        return Response.status(200).entity(output).build();
-
     }
 
     @POST
-    @Path("/edituser/{username}")
-    public Response editUsername(@PathParam("username") String username, @FormParam("username") String desiredUsername) {
+    @Secured
+    @Path("/edituser")
+    public Response editUsername(EditUserRequest request) {
         try {
-            userService.editName(username, desiredUsername);
+            userService.editName(request.getUsername(), request.getDesiredUsername());
             return Response.status(200).entity("Username has been changed!").build();
 
         } catch (UserNotFoundException e) {
@@ -58,12 +51,11 @@ public class UserServiceRest {
     }
 
     @POST
-    @Path("/editprofile/{username}")
-    public Response editUsername(@PathParam("username") String username, @FormParam("bio") String desiredBio, @FormParam("location") String desiredLocation, @FormParam("website") String desiredWebsite) {
+    @Path("/editprofile")
+    public Response editProfile(EditUserRequest request) {
         try {
-            userService.editProfile(username, desiredBio, desiredLocation, desiredWebsite);
+            userService.editProfile(request.getUsername(), request.getBio(), request.getLocation(), request.getWebsite());
             return Response.status(200).entity("User details have been changed!").build();
-
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();
         } catch (MessageTooLongException e) {
@@ -73,11 +65,11 @@ public class UserServiceRest {
     }
 
     @GET
-    @Path("/editprofile/{username}/{followed}")
-    public Response follow(@PathParam("username") String username, @PathParam("followed") String followed) {
+    @Path("/follow")
+    public Response follow(FollowRequest request) {
         try {
-            userService.follow(username, followed);
-            return Response.status(200).entity("User details have been changed!").build();
+            userService.follow(request.getUsername(), request.getFollowed());
+            return Response.status(200).entity("User followed!").build();
 
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();
