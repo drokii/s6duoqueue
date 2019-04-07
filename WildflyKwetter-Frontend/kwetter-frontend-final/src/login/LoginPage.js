@@ -1,4 +1,5 @@
 import { Container, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 import React from 'react';
 import axios from 'axios';
 
@@ -11,15 +12,39 @@ class LoginPage extends React.Component {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.logIn = this.logIn.bind(this);
+
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        logIn(e.target.username, e.target.password)
+        this.logIn(e.target.username, e.target.password);
     }
 
     handleChange(e) {
-        this.setState({ value: e.target.value })
+        let change = {}
+        change[e.target.name] = e.target.value
+        this.setState(change)
+    }
+
+    logIn() {
+        // todo : Shove this elsewhere
+
+        axios.post('/authentication', {
+            username: this.state.username,
+            password: this.state.password
+        })
+            .then(function (response) {
+                console.log(response)
+                axios.defaults.headers.common['Authorization'] = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+                return null;
+            });
+
+        this.props.authenticate();
+        this.props.history.push('/')
     }
 
 
@@ -35,7 +60,7 @@ class LoginPage extends React.Component {
                                 name="username"
                                 id="username"
                                 value={this.state.username}
-                                onChange= {this.handleChange}
+                                onChange={this.handleChange}
 
                             />
                         </FormGroup>
@@ -48,10 +73,10 @@ class LoginPage extends React.Component {
                                 name="password"
                                 id="password"
                                 value={this.state.password}
-                                onChange= {this.handleChange}
+                                onChange={this.handleChange}
                             />
                         </FormGroup>
-                        <Button style={{ margin: 'auto', display: 'block' }}>Submit</Button>
+                        <Button style={{ margin: 'auto', display: 'block' }} >Submit</Button>
                     </Col>
 
                 </Form>
@@ -62,20 +87,7 @@ class LoginPage extends React.Component {
 
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);
 
-function logIn(name, pass) {
-    axios.post('/authentication', {
-        username: name.toString,
-        password: pass.toString
-    })
-        .then(function (response) {
-            console.log(response);
-            return true;
-        })
-        .catch(function (error) {
-            console.log(error);
-            return false;
-        });
-}
+
 
