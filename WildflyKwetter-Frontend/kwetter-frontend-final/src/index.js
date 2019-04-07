@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+let axiosDefaults = require('axios/lib/defaults');
+axiosDefaults.baseURL = 'http://localhost:8080/kwetter/rest/';
 const app = (
     <BrowserRouter>
     <App />

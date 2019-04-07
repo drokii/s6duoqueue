@@ -16,6 +16,10 @@ class LoginDialog extends React.Component {
     password: ''
   };
 
+  validateForm() {
+    return this.state.username.length > 0 && this.state.password.length > 0;
+  }
+
   handleClickOpen = () => {
     this.setState({ open: true });
   };
@@ -25,7 +29,7 @@ class LoginDialog extends React.Component {
   };
 
   handleLogIn = () => {
-    this.props.history.push('/profile')
+    this.props.history.push('/')
     this.handleClose();
   }
 
@@ -81,9 +85,6 @@ class LoginDialog extends React.Component {
             </FormControl>
           </DialogContent>
           <DialogActions>
-          <Button onClick={this.handleClose} color="primary">
-              Sign Up
-            </Button>
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>

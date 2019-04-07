@@ -39,7 +39,6 @@ public class UserServiceRest {
         try {
             userService.editName(request.getUsername(), request.getDesiredUsername());
             return Response.status(200).entity("Username has been changed!").build();
-
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();
         } catch (UsernameTakenException e) {
