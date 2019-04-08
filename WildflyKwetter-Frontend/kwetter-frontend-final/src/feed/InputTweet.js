@@ -8,31 +8,36 @@ import { RefreshIndicator } from 'material-ui';
 
 
 class InputTweet extends React.Component {
+
     constructor(props) {
         super(props)
         this.handlePostTweet = this.handlePostTweet.bind(this)
     }
 
     handlePostTweet = () => {
-        axios.post('/tweet/post',
-            {
-                message: 'FUCK THIS',
-                username: this.props.activeUser
-            },
+
+        var tweet = {
+            author: this.props.activeUser,
+            message: 'FUCK THIS',
+            date: 'yeah'
+        };
+
+        axios.post('/tweet/post', {
+            message: 'FUCK THIS',
+            username: this.props.activeUser
+        },
             {
                 headers: { Authorization: localStorage.getItem('token') }
-            }
-             )
-            .then(function (response) {
+            })
+            .then(response => {
+                this.props.addTweet(tweet)
                 console.log(response)
-
             })
             .catch(function (error) {
                 console.log(error)
             });
-
-
     };
+
     render() {
         return (
             <div>

@@ -15,11 +15,18 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
+        this.addTweet = this.addTweet.bind(this)
     }
 
     componentDidMount() {
         var activeUser = this.props.getActiveUser()
         this.setState({ activeUser: activeUser })
+    }
+
+    addTweet(tweet){
+        var newArray = this.state.tweets.slice();    
+        newArray.unshift(tweet);   
+        this.setState({tweets:newArray})
     }
 
     retrieveTweets = () => {
@@ -51,7 +58,7 @@ class HomePage extends React.Component {
             return (
                 <div style={{ marginTop: 20, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}>
                     <Container>
-                        <InputTweet activeUser={this.state.activeUser} handlePostTweet={this.handlePostTweet} />
+                        <InputTweet activeUser={this.state.activeUser} addTweet={this.addTweet} />
                         <TweetFeed tweets={this.state.tweets} />
                     </Container>
                 </div>
