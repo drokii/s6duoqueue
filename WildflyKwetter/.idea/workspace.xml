@@ -7,52 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/LoginDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/LoginDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/conf/conf.d/default.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/duck/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/duck/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/duck/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/duck/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/duck/types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/app/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/assets/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/common/helpers/axios/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/common/helpers/generators/actionType.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/common/helpers/generators/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/common/helpers/generators/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/common/helpers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/components/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/duck/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/duck/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/duck/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/duck/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/duck/types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/home/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/react-redux-frontend/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/FeedPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/login/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/login/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/TweetServiceRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/TweetServiceRest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/UserServiceRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/UserServiceRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Tweet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="483">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,22 +50,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/PostTweetRequest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="493">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
-                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="170">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/auth/CorsFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="39">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/auth/AuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="-68">
               <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -196,8 +156,8 @@
       <list>
         <option value="jsf" />
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -218,8 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/rest/TweetServiceRestTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/presenters/StartPresenter.java" />
         <option value="$PROJECT_DIR$/src/test/java/services/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jpa/LoginBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java" />
@@ -265,10 +223,12 @@
         <option value="$PROJECT_DIR$/src/main/java/auth/requests/EditUserRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/requests/GetUserRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/requests/FollowRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Tweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" />
       </list>
     </option>
   </component>
@@ -288,8 +248,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="193" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1087" />
   </component>
@@ -301,8 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,6 +294,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oof" type="b2602c69:ProjectViewProjectNode" />
@@ -430,6 +397,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +409,7 @@
     <property name="SearchEverywhereHistoryKey" value="ServiceBean&#9;PSI&#9;JAVA://javax.management.relation.RelationServiceMBean" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554643502337" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554733263584" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -744,6 +713,7 @@
       <workItem from="1554113143254" duration="1331000" />
       <workItem from="1554454713766" duration="11687000" />
       <workItem from="1554642958003" duration="542000" />
+      <workItem from="1554716180635" duration="3515000" />
     </task>
     <servers />
   </component>
@@ -780,13 +750,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169888000" />
+    <option name="totallyTimeSpent" value="173403000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30634573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -797,12 +767,12 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281412" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4067086" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40290758" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32869378" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3281412" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32285115" />
@@ -882,13 +852,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/UserNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/memory/UserDAOMemoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -961,8 +924,8 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/ServiceBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/repo/RepositoryManager.java" />
@@ -1012,13 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
           <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1124,16 +1080,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/GetUserRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/GetTweetsRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/PostTweetRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1158,12 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="e#85#86#0" expanded="true" />
-            <element signature="e#116#117#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,33 +1124,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth/AuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/LoginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#134#135#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="85">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1219,8 +1143,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="39">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auth/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

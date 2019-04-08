@@ -1,6 +1,7 @@
 package rest;
 
 import auth.Secured;
+import auth.dtos.TweetDTO;
 import auth.requests.PostTweetRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
@@ -35,8 +36,9 @@ public class TweetServiceRest {
         try {
 
             List<Tweet> tweetList = tweetService.getTweetsFromUser(username);
+
             Gson gson = new Gson();
-            String output = gson.toJson(tweetList);
+            String output = gson.toJson(convertIntoDTO(tweetList));
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
@@ -50,6 +52,7 @@ public class TweetServiceRest {
     public Response getTweetsFromFollowers(@PathParam("username") String username) {
         List<Tweet> allTweets = new ArrayList<>();
         List<Tweet> tweetList;
+
         try {
 
             for (User follower: userService.getUserByUsername(username).getFollowers()){
@@ -58,7 +61,7 @@ public class TweetServiceRest {
             }
 
             Gson gson = new Gson();
-            String output = gson.toJson(allTweets);
+            String output = gson.toJson(convertIntoDTO(allTweets));
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
@@ -95,6 +98,17 @@ public class TweetServiceRest {
 
         return Response.status(200).entity(output).build();
 
+    }
+
+    private List<TweetDTO> convertIntoDTO(List<Tweet> tweets){
+        List<TweetDTO> dataObjectList = new ArrayList<>();
+
+        for (Tweet t :
+                tweets) {
+            dataObjectList.add(new TweetDTO(t.getAuthor().getUsername(), t.getMessage(), t.getDate()));
+        }
+
+        return dataObjectList;
     }
 
 }

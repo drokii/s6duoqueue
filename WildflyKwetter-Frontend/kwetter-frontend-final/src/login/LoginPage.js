@@ -6,7 +6,7 @@ import axios from 'axios';
 
 class LoginPage extends React.Component {
 
-    state = { username: '', password: '', }
+    state = { username: '', password: '', isAuthed: false }
 
     constructor() {
         super();
@@ -18,7 +18,7 @@ class LoginPage extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.logIn(e.target.username, e.target.password);
+        this.logIn(e.target.username, e.target.password)
     }
 
     handleChange(e) {
@@ -27,25 +27,35 @@ class LoginPage extends React.Component {
         this.setState(change)
     }
 
-    logIn() {
-        // todo : Shove this elsewhere
 
+
+    logIn = () => {
+        // todo : Shove this elsewhere
         axios.post('/authentication', {
             username: this.state.username,
             password: this.state.password
         })
-            .then(function (response) {
-                console.log(response)
-                axios.defaults.headers.common['Authorization'] = response.data;
+            .then(response => {
+                if (response.status === 200) {
+                    localStorage.setItem('token', 'Bearer '.concat(response.data) )
+                    console.log(response)
+                    this.props.authenticate(this.state.username)
+                    this.props.history.push('/')
+                }
+                else {
+                    console.log(response)
+                    // todo:bad login msg
+                }
             })
             .catch(function (error) {
                 console.log(error);
-                return null;
+                // todo:bad call msg
+
             });
 
-        this.props.authenticate();
-        this.props.history.push('/')
     }
+
+
 
 
     render() {

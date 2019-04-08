@@ -16,6 +16,10 @@ public class Tweet {
     @Temporal(TemporalType.DATE)
     private Date date;
 
+    public User getAuthor() {
+        return author;
+    }
+
     @ManyToOne(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
     private User author;
