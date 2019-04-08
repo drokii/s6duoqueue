@@ -3,6 +3,7 @@ package rest;
 import auth.Secured;
 import auth.dtos.TweetDTO;
 import auth.requests.PostTweetRequest;
+import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -38,7 +39,7 @@ public class TweetServiceRest {
             List<Tweet> tweetList = tweetService.getTweetsFromUser(username);
 
             Gson gson = new Gson();
-            String output = gson.toJson(convertIntoDTO(tweetList));
+            String output = gson.toJson(Lists.reverse(convertIntoDTO(tweetList)));
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
@@ -61,7 +62,7 @@ public class TweetServiceRest {
             }
 
             Gson gson = new Gson();
-            String output = gson.toJson(convertIntoDTO(allTweets));
+            String output = gson.toJson(Lists.reverse(convertIntoDTO(allTweets)));
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
@@ -84,7 +85,7 @@ public class TweetServiceRest {
     }
 
     @GET
-    @Path("/{search}")
+    @Path("/search/{search}")
     public Response searchTweet(@PathParam("search") String search) {
 
         List<Tweet> tweetList = tweetService.lookForTweet(search);

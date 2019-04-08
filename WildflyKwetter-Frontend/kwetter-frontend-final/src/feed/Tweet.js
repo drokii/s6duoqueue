@@ -10,9 +10,10 @@ const Tweet = (props) => {
     return (
         <Card>
             <CardBody>
-                <CardTitle>{props.author}</CardTitle>
+                <CardTitle><b>{props.author}</b></CardTitle>
                 <CardSubtitle>{props.message}</CardSubtitle>
-                <CardText>{props.date}</CardText>
+                <CardText>
+                <small className="text-muted">{props.date}</small></CardText>
             </CardBody>
         </Card>
 

@@ -18,7 +18,7 @@ class LoginPage extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.logIn(e.target.username, e.target.password)
+        this.logIn()
     }
 
     handleChange(e) {

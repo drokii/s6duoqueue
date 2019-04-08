@@ -4,15 +4,18 @@ import Tweet from './Tweet';
 
 class TweetFeed extends React.Component {
 
-    state = {
-        tweets : []
-    }
-
     render() {
+
+        const tweets = this.props.tweets.map(tweet => {
+            return <Tweet author={tweet.author} message={tweet.message} date={tweet.date} />;
+        });
+
         return (
+           <div>
+            {tweets}
+           </div> 
             
-        <Tweet author={'dab'} message={'dab'} date={'dab'} />
-        );
+        )
     }
 }
 export default TweetFeed;

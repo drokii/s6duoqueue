@@ -41,7 +41,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path="/login" exact render={(props) => <LoginPage {...props} authenticate={this.authenticate} />} />
-          <Route path="/" exact component={() => <HomePage checkWhetherAuthenticated={this.checkWhetherAuthenticated} getActiveUser={this.getActiveUser} />} />
+          <Route path="/" exact render={(props) => <HomePage {...props} checkWhetherAuthenticated={this.checkWhetherAuthenticated} getActiveUser={this.getActiveUser} />} />
         </Switch>
       </div>
     );
