@@ -38,7 +38,7 @@ class LoginPage extends React.Component {
             .then(response => {
                 if (response.status === 200) {
                     localStorage.setItem('token', 'Bearer '.concat(response.data) )
-                    console.log(response)
+                    localStorage.setItem('username', this.state.username)
                     this.props.authenticate(this.state.username)
                     this.props.history.push('/')
                 }

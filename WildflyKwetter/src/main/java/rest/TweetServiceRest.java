@@ -32,11 +32,11 @@ public class TweetServiceRest {
     UserService userService;
 
     @GET
-    @Path("/get/{username}")
-    public Response getTweetsFrom(@PathParam("username") String username) {
+    @Path("/get/{id}")
+    public Response getTweetsFrom(@PathParam("id") long id) {
         try {
 
-            List<Tweet> tweetList = tweetService.getTweetsFromUser(username);
+            List<Tweet> tweetList = tweetService.getTweetsFromUser(userService.getUserById((int) id).getUsername());
 
             Gson gson = new Gson();
             String output = gson.toJson(Lists.reverse(convertIntoDTO(tweetList)));
@@ -49,14 +49,14 @@ public class TweetServiceRest {
     }
 
     @GET
-    @Path("/followers/{username}")
-    public Response getTweetsFromFollowers(@PathParam("username") String username) {
+    @Path("/followers/{id}")
+    public Response getTweetsFromFollowers(@PathParam("id") long id) {
         List<Tweet> allTweets = new ArrayList<>();
         List<Tweet> tweetList;
 
         try {
 
-            for (User follower: userService.getUserByUsername(username).getFollowers()){
+            for (User follower: userService.getUserById((int) id).getFollowers()){
                tweetList = tweetService.getTweetsFromUser(follower.getUsername());
                allTweets.addAll(tweetList);
             }
@@ -75,7 +75,7 @@ public class TweetServiceRest {
     @Path("/post")
     public Response postTweet(PostTweetRequest request) {
         try {
-            tweetService.postTweet(request.getUsername(), request.getMessage());
+            tweetService.postTweet(userService.getUserById(Integer.parseInt(request.getId())).getUsername(), request.getMessage());
             return Response.status(200).entity("Tweet Posted!").build();
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();

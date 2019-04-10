@@ -4,11 +4,11 @@ import java.io.Serializable;
 
 public class PostTweetRequest implements Serializable {
 
-    private String username;
+    private String id;
     private String message;
 
-    public String getUsername() {
-        return username;
+    public String getId() {
+        return id;
     }
 
     public String getMessage() {

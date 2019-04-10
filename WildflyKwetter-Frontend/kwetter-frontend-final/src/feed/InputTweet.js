@@ -3,28 +3,39 @@ import {
     Card, Form, FormGroup, Label, Input, CardBody, Col, Button
 } from 'reactstrap';
 import axios from 'axios';
-import { RefreshIndicator } from 'material-ui';
+import jwt_decode from 'jwt-decode';
 
 
 
 class InputTweet extends React.Component {
 
+    state = {
+        tweet : '' 
+    }
+
     constructor(props) {
         super(props)
         this.handlePostTweet = this.handlePostTweet.bind(this)
+        this.handleChange= this.handleChange.bind(this)
+        
+    }
+
+    handleChange(e) {
+        let change = {}
+        change[e.target.name] = e.target.value
+        this.setState(change)
     }
 
     handlePostTweet = () => {
-
         var tweet = {
-            author: this.props.activeUser,
-            message: 'FUCK THIS',
-            date: 'yeah'
+            author: localStorage.getItem('username'),
+            message: this.state.tweet,
+            date: Date.now
         };
 
         axios.post('/tweet/post', {
-            message: 'FUCK THIS',
-            username: this.props.activeUser
+            id: jwt_decode(localStorage.getItem('token')).sub,
+            message: this.state.tweet
         },
             {
                 headers: { Authorization: localStorage.getItem('token') }
@@ -49,6 +60,8 @@ class InputTweet extends React.Component {
                                 <Input
                                     name="tweet"
                                     id="tweet"
+                                    value = {this.state.tweet}
+                                    onChange= {this.handleChange}
                                 />
                             </FormGroup>
                         </Col>

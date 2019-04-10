@@ -40,6 +40,6 @@ public class AuthenticationEndpoint {
     }
 
     private String issueToken(String username) {
-        return tokenHelper.createJWT(UUID.randomUUID().toString(), "kwetter", username, 1000000);
+        return tokenHelper.createJWT(UUID.randomUUID().toString(), "kwetter", String.valueOf(userService.getUserByUsername(username).getId()), 1000000);
     }
 }
