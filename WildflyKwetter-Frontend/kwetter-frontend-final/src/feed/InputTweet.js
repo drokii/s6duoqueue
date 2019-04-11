@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Card, Form, FormGroup, Label, Input, CardBody, Col, Button
+    Card, FormGroup, Label, Input, CardBody, Col, Button
 } from 'reactstrap';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';

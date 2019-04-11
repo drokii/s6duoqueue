@@ -51,9 +51,7 @@ class HomePage extends React.Component {
 
     render() {
         var isAuthenticated = localStorage.getItem('token');
-        console.log(isAuthenticated)
         if (isAuthenticated === null) {
-            console.log('no auth!')
             return <Redirect to='/login' />
         };
 

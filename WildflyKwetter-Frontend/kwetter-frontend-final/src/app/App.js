@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginPage from '../login/LoginPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from '../feed/HomePage';
+import ProfilePage from '../profile/ProfilePage'
 
 class App extends Component {
 
@@ -42,6 +43,7 @@ class App extends Component {
         <Switch>
           <Route path="/login" exact render={(props) => <LoginPage {...props} authenticate={this.authenticate} />} />
           <Route path="/" exact render={(props) => <HomePage {...props} checkWhetherAuthenticated={this.checkWhetherAuthenticated} getActiveUser={this.getActiveUser} />} />
+          <Route path="/profile" exact component={ProfilePage}/>
         </Switch>
       </div>
     );
