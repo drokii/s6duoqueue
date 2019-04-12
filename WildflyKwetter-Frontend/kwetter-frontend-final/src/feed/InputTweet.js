@@ -27,10 +27,10 @@ class InputTweet extends React.Component {
     }
 
     handlePostTweet = () => {
+
         var tweet = {
             author: localStorage.getItem('username'),
             message: this.state.tweet,
-            date: Date.now
         };
 
         axios.post('/tweet/post', {
@@ -51,7 +51,7 @@ class InputTweet extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{marginBottom: 20}}>
                 <Card>
                     <CardBody>
                         <Col>

@@ -7,8 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/InputTweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/InputTweet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/kwetter_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/kwetter.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/EntityDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/EntityDAOJPA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/MentionDAOJPA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/ServiceBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/TrendDAOJPA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/TweetDAOJPA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/jpa/UserDAOJPA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/memory/DAORepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/memory/TweetDAOMemory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/dao/memory/UserDAOMemory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/exceptions/MessageTooLongException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/exceptions/TweetNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/exceptions/UserNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/exceptions/UsernameTakenException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/Mention.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/Trend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/Tweet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/AdminPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/LoginPresenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/presenters/helper/UserConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/repo/GenericProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/repo/RepositoryManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/TweetServiceRest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/rest/UserServiceRest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/MentionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/TrendService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/TweetService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/services/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/jboss-web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/derby-10.14.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jackson-core-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jjwt-api-0.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jjwt-impl-0.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/jjwt-jackson-0.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/lib/omnifaces-3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/admin.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/loginadmin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kwetter/loginadmin.xhtml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+            <state relative-caret-position="841">
+              <caret line="108" column="41" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,37 +101,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/auth/AuthenticationFilter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/InputTweet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/TrendDAOJPA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="1344">
+              <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="619">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -94,7 +148,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="494">
               <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
             </state>
           </provider>
@@ -121,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="307">
+              <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -175,8 +229,6 @@
         <option value="$PROJECT_DIR$/src/main/java/presenters/helper/UserConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/presenters/LoginAdminPanelPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java" />
         <option value="$PROJECT_DIR$/src/test/resources/arquillian.xml" />
         <option value="$PROJECT_DIR$/src/main/java/presenters/helper/LogInRequest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -201,12 +253,14 @@
         <option value="$PROJECT_DIR$/src/main/java/auth/requests/FollowRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/CorsFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Tweet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/requests/PostTweetRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" />
       </list>
     </option>
   </component>
@@ -226,10 +280,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2873" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -239,8 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,7 +333,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
+              <item name="dtos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oof" type="b2602c69:ProjectViewProjectNode" />
@@ -306,6 +358,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -316,10 +376,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WildflyKwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,7 +404,7 @@
     <property name="SearchEverywhereHistoryKey" value="ServiceBean&#9;PSI&#9;JAVA://javax.management.relation.RelationServiceMBean" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554904479717" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555082472073" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -516,9 +590,9 @@
     <configuration name="JBoss 15.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 15.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="kwetter">
+        <file path="$PROJECT_DIR$/target/kwetter.war">
           <settings />
-        </artifact>
+        </file>
       </deployment>
       <server-settings>
         <option name="SERVER" />
@@ -526,7 +600,7 @@
         <option name="DOMAIN" value="false" />
         <option name="SERVER_GROUP" value="main-server-group" />
         <option name="USERNAME" value="test" />
-        <option name="CREDENTIAL_ALIAS" value="0e424438-8532-4e25-9cd2-0ff3681f5b9a" />
+        <option name="PASSWORD" value="" />
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
@@ -637,6 +711,7 @@
       <workItem from="1554716180635" duration="6137000" />
       <workItem from="1554891921115" duration="7559000" />
       <workItem from="1554985198500" duration="717000" />
+      <workItem from="1555064795366" duration="5717000" />
     </task>
     <servers />
   </component>
@@ -673,12 +748,21 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184301000" />
+    <option name="totallyTimeSpent" value="190018000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="2873" y="0" width="974" height="1087" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.152349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31619257" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -689,16 +773,16 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281412" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4022663" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4056604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3281412" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32914045" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32809225" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32914045" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32152975" />
-      <window_info active="true" anchor="bottom" id="Java Enterprise" order="11" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32087228" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32809225" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -807,13 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -951,29 +1028,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/FollowRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/EditUserRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/LoginRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/CorsFilter.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2278">
           <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,20 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/PostTweetRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/TokenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1026,17 +1071,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="307">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/AuthenticationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auth/requests/PostTweetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Tweet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="86" column="22" lean-forward="true" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="108" column="41" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1184,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8.0_144</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

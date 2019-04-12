@@ -7,7 +7,7 @@ class TweetFeed extends React.Component {
     render() {
 
         const tweets = this.props.tweets.map(tweet => {
-            return <Tweet author={tweet.author} message={tweet.message} date={tweet.date} />;
+            return <Tweet authorId={tweet.authorId} author={tweet.author} message={tweet.message} date={tweet.date} />;
         });
 
         return (

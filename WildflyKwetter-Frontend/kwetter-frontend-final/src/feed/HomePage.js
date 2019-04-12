@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom'
 import TweetFeed from './TweetFeed';
 import axios from 'axios';
-import { Spinner, Container } from 'reactstrap';
+import { Col, Row, Spinner, Container } from 'reactstrap';
 import InputTweet from './InputTweet';
 import jwt_decode from 'jwt-decode';
 
@@ -15,7 +15,6 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
-        this.addTweet = this.addTweet.bind(this)
     }
 
     componentDidMount() {
@@ -23,17 +22,10 @@ class HomePage extends React.Component {
         this.setState({ activeUser: activeUser })
     }
 
-    addTweet(tweet){
-        var newArray = this.state.tweets.slice();    
-        newArray.unshift(tweet);   
-        this.setState({tweets:newArray})
-    }
-
     retrieveTweets = () => {
-        try{
+        try {
             var url = '/tweet/get/' // replace by tweets by followers soon
-            var activeUser =  jwt_decode(localStorage.getItem('token')).sub
-            console.log(activeUser)
+            var activeUser = jwt_decode(localStorage.getItem('token')).sub
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
                     console.log(response)
@@ -43,10 +35,10 @@ class HomePage extends React.Component {
                 .catch(function (error) {
                     console.log(error);
                 });
-        }catch(e){
+        } catch (e) {
             console.log(e)
         }
-        
+
     }
 
     render() {
@@ -64,8 +56,16 @@ class HomePage extends React.Component {
             return (
                 <div style={{ marginTop: 20, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}>
                     <Container>
-                        <InputTweet activeUser={this.state.activeUser} addTweet={this.addTweet} />
-                        <TweetFeed tweets={this.state.tweets} />
+                        <Row>
+                            <Col>
+                                <h1 style={{ textAlign: 'center', marginBottom: 20 }}>Kwetter.</h1>
+                                <InputTweet activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
+                                <TweetFeed tweets={this.state.tweets} />
+                            </Col>
+                        </Row>
+
+
+
                     </Container>
                 </div>
             );
