@@ -20,6 +20,7 @@ class ProfilePage extends React.Component {
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
+        this.retrieveUser = this.retrieveUser.bind(this)
     }
 
     componentDidMount() {
@@ -49,10 +50,15 @@ class ProfilePage extends React.Component {
     retrieveUser= () => {
         try {
             var url = '/user/'
-            axios.get(url.concat(this.username), { headers: { Authorization: localStorage.getItem('token') } })
+            axios.get(url.concat(this.state.userId), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
                     console.log(response)
-                    this.setState({ tweets: response.data })
+                    this.setState({ 
+                        username: response.data.username,
+                        website : response.data.website,
+                        location : response.data.location,
+                        bio : response.data.bio
+                    })
                     console.log(this.state.tweets)
                 })
                 .catch(function (error) {
@@ -72,6 +78,11 @@ class ProfilePage extends React.Component {
 
         if (this.state.tweets.length === 0) {
             this.retrieveTweets()
+            return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
+        }
+
+        if (this.state.username === '') {
+            this.retrieveUser()
             return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
         }
 

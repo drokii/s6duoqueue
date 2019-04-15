@@ -106,9 +106,7 @@ public class TweetServiceRest {
 
         for (Tweet t :
                 tweets) {
-            System.out.println("executing conversion:" + t.getAuthor().getId());
             dataObjectList.add(new TweetDTO(t.getAuthor().getUsername(), t.getMessage(), t.getDate(), String.valueOf((t.getAuthor().getId()))));
-
         }
 
         return dataObjectList;
