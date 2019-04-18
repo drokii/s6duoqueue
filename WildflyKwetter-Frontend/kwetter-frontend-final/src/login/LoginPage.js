@@ -2,6 +2,7 @@ import { Container, Col, Button, Form, FormGroup, Label, Input } from 'reactstra
 import { withRouter } from 'react-router-dom';
 import React from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 class LoginPage extends React.Component {
@@ -13,6 +14,7 @@ class LoginPage extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.logIn = this.logIn.bind(this);
+        this.notify = this.notify.bind(this)
 
     }
 
@@ -44,18 +46,19 @@ class LoginPage extends React.Component {
                 }
                 else {
                     console.log(response)
-                    // todo:bad login msg
+                    this.notify(response.data)
                 }
             })
-            .catch(function (error) {
+            .catch(error => {
                 console.log(error);
-                // todo:bad call msg
-
+                this.notify("Your credentials aren't correct.")
             });
 
     }
 
-
+    notify = (message) => {
+        toast(message)
+    }
 
 
     render() {
@@ -87,6 +90,7 @@ class LoginPage extends React.Component {
                             />
                         </FormGroup>
                         <Button style={{ margin: 'auto', display: 'block' }} >Submit</Button>
+                        <ToastContainer/>
                     </Col>
 
                 </Form>

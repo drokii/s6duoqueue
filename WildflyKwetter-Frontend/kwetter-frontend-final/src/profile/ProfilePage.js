@@ -6,6 +6,9 @@ import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import InputTweet from '../feed/InputTweet';
 import EditProfileMenu from './EditProfileMenu';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { withRouter } from 'react-router-dom';
 
 class ProfilePage extends React.Component {
 
@@ -23,7 +26,8 @@ class ProfilePage extends React.Component {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
         this.retrieveUser = this.retrieveUser.bind(this)
-        this.toggleModal = this.toggleModal.bind(this);
+        this.toggleModal = this.toggleModal.bind(this)
+        this.notify = this.notify.bind(this)
     }
 
     componentDidMount() {
@@ -37,9 +41,7 @@ class ProfilePage extends React.Component {
             var activeUser = this.state.userId
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
-                    console.log(response)
                     this.setState({ tweets: response.data })
-                    console.log(this.state.tweets)
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -56,30 +58,37 @@ class ProfilePage extends React.Component {
         }));
     }
 
+    notify = (message) => {
+        toast(message)
+    }
+
     retrieveUser = () => {
-        try {
-            var url = '/user/'
-            axios.get(url.concat(this.state.userId), { headers: { Authorization: localStorage.getItem('token') } })
-                .then(response => {
-                    console.log(response)
-                    this.setState({
-                        username: response.data.username,
-                        website: response.data.website,
-                        location: response.data.location,
-                        bio: response.data.bio
-                    })
-                    console.log(this.state.tweets)
+
+        var url = '/user/'
+        axios.get(url.concat(this.state.userId))
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    username: response.data.username,
+                    website: response.data.website,
+                    location: response.data.location,
+                    bio: response.data.bio
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
-        } catch (e) {
-            console.log(e)
-        }
+                console.log(this.state)
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
 
     }
 
     render() {
+
+        var isAuthenticated = localStorage.getItem('token');
+        if (isAuthenticated === null) {
+            return <Redirect to='/login' />
+        };
 
         if (this.props.location.state === null) {
             return <Redirect to='/' />
@@ -119,7 +128,7 @@ class ProfilePage extends React.Component {
                                             <Button color="primary" onClick={this.toggleModal}>Edit Profile</Button>
 
                                             <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
-                                                <EditProfileMenu toggleModal={this.toggleModal} />
+                                                <EditProfileMenu notify={this.notify} toggleModal={this.toggleModal} username={this.state.username} userLocation={this.state.location} website={this.state.website} bio={this.state.bio} />
                                             </Modal>
 
                                         </CardBody>
@@ -147,10 +156,11 @@ class ProfilePage extends React.Component {
 
                     </Row>
                 </Container>
+                <ToastContainer />
             </div>
 
         )
     }
 
 }
-export default ProfilePage
+export default withRouter(ProfilePage)

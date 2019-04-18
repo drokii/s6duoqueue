@@ -40,16 +40,16 @@ public class UserServiceRest {
     @POST
     @Secured
     @Path("/edituser")
-    public Response editUsername(EditUserRequest request) {
+    public Response editUsername(EditUserRequest request) throws MessageTooLongException, UserNotFoundException {
         try {
             userService.editName(request.getUsername(), request.getDesiredUsername());
-            return Response.status(200).entity("Username has been changed!").build();
+            return Response.status(200).entity("Profile and Username has been changed!").build();
         } catch (UserNotFoundException e) {
             return Response.status(200).entity("This user doesn't exist.").build();
         } catch (UsernameTakenException e) {
-            return Response.status(200).entity("Username is already in use.").build();
+            userService.editProfile(request.getUsername(), request.getBio(), request.getLocation(), request.getWebsite());
+            return Response.status(200).entity("Profile Edited.").build();
         }
-
     }
 
     @POST

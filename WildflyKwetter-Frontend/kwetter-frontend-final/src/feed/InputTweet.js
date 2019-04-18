@@ -4,7 +4,7 @@ import {
 } from 'reactstrap';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
-
+import {Redirect} from 'react-router-dom'
 
 
 class InputTweet extends React.Component {
@@ -46,6 +46,7 @@ class InputTweet extends React.Component {
             })
             .catch(function (error) {
                 console.log(error)
+                return <Redirect to='/login' />
             });
     };
 
