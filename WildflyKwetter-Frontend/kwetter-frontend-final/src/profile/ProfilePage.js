@@ -1,10 +1,11 @@
 import React from 'react';
-import { Spinner, Container, Row, Col, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button, Card } from 'reactstrap';
+import { Spinner, Container, Row, Col, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button, Card, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
 import TweetFeed from '../feed/TweetFeed';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import InputTweet from '../feed/InputTweet';
+import EditProfileMenu from './EditProfileMenu';
 
 class ProfilePage extends React.Component {
 
@@ -14,13 +15,15 @@ class ProfilePage extends React.Component {
         bio: '',
         website: '',
         location: '',
-        tweets: []
+        tweets: [],
+        modal: false
     }
 
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
         this.retrieveUser = this.retrieveUser.bind(this)
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
     componentDidMount() {
@@ -47,17 +50,23 @@ class ProfilePage extends React.Component {
 
     }
 
-    retrieveUser= () => {
+    toggleModal() {
+        this.setState(prevState => ({
+            modal: !prevState.modal
+        }));
+    }
+
+    retrieveUser = () => {
         try {
             var url = '/user/'
             axios.get(url.concat(this.state.userId), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
                     console.log(response)
-                    this.setState({ 
+                    this.setState({
                         username: response.data.username,
-                        website : response.data.website,
-                        location : response.data.location,
-                        bio : response.data.bio
+                        website: response.data.website,
+                        location: response.data.location,
+                        bio: response.data.bio
                     })
                     console.log(this.state.tweets)
                 })
@@ -97,7 +106,7 @@ class ProfilePage extends React.Component {
                                         <div style={{ margin: 'auto', padding: 20 }}>
                                             <img style={{ borderRadius: 80, width: 160, height: 160 }} src="https://i.imgur.com/3Gw4MkV.png" alt="Avatar" />
                                         </div>
-                                        <CardBody style={{textAlign:'center'}}>
+                                        <CardBody style={{ textAlign: 'center' }}>
                                             <CardTitle><b>{this.state.username}</b></CardTitle>
                                             <small className="text-muted">Bio</small>
                                             <CardSubtitle>{this.state.bio}</CardSubtitle>
@@ -107,7 +116,11 @@ class ProfilePage extends React.Component {
                                             <CardText>{this.state.website}</CardText>
 
                                             <Button style={{ marginRight: 10 }}>Follow</Button>
-                                            <Button >Edit</Button>
+                                            <Button color="primary" onClick={this.toggleModal}>Edit Profile</Button>
+
+                                            <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
+                                                <EditProfileMenu toggleModal={this.toggleModal} />
+                                            </Modal>
 
                                         </CardBody>
                                     </Card>
@@ -119,7 +132,6 @@ class ProfilePage extends React.Component {
                         <Col>
                             <Card>
                                 <InputTweet activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
-
                                 <TweetFeed tweets={this.state.tweets} />
                             </Card>
                         </Col>

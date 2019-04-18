@@ -11,6 +11,8 @@
             <property name="jbossHome">${C:\Users\Pedro\Downloads\wildfly-15.0.1.Final\wildfly-15.0.1.Final}</property>
             <property name="allowConnectingToRunningServer">true</property>
             <property name="modulePath">C:\Users\Pedro\Downloads\wildfly-15.0.1.Final\wildfly-15.0.1.Final\modules</property>
+            <property name="managementAddress">127.0.0.1</property>
+            <property name="managementPort">9995</property>
         </configuration>
     </container>
 </arquillian>

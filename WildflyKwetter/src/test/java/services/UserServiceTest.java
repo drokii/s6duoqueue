@@ -68,8 +68,7 @@ public class UserServiceTest {
     @Test
     public void editName() throws UserNotFoundException, UsernameTakenException {
         userService.editName("testuser2", "yeah mane");
-        assertTrue(userDAOJPA.findByUsername("yeah mane").getUsername().contains("yeah mane"));
-        userService.editName("yeah mane", "testuser2");
+        assertTrue(userDAOJPA.findByUsername("yeah mane").getUsername().equals("yeah mane"));
 
     }
 
