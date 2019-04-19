@@ -91,19 +91,23 @@ public class AdminPresenter {
     }
 
     public void genTestdata() throws MessageTooLongException, UserNotFoundException {
-        for (int i = 0; i < 10; i++) {
-            User user = new User("username" + i, "password" + i, "bio" + i, "website" + i, " location" + i);
-            user.setRole(Role.USER);
-            userDAOJPA.create(user);
-            tweetService.postTweet("username" + i, "YAS QUEEN");
-            System.out.println(user.getRole().toString());
-        }
 
         User user = new User("test", "test", "bio" , "website" , " location" );
         user.setRole(Role.ADMIN);
         userDAOJPA.create(user);
         tweetService.postTweet("test", "YAS QUEEN");
         System.out.println(user.getRole().toString());
+
+        for (int i = 0; i < 10; i++) {
+            User u = new User("username" + i, "password" + i, "bio" + i, "website" + i, " location" + i);
+            u.setRole(Role.USER);
+            userDAOJPA.create(u);
+            userService.follow(u.getUsername(), "test");
+            tweetService.postTweet("username" + i, "YAS QUEEN");
+            System.out.println(u.getRole().toString());
+        }
+
+
 
     }
     public void debugRoles(){

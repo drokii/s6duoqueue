@@ -1,6 +1,7 @@
 package rest;
 
 import auth.Secured;
+import auth.dtos.FollowerDTO;
 import auth.dtos.TweetDTO;
 import auth.dtos.UserDTO;
 import auth.requests.EditUserRequest;
@@ -31,9 +32,12 @@ public class UserServiceRest {
     @Path("/{id}")
     public Response getUser(@PathParam("id") String id) throws UserNotFoundException {
         User user = userService.getUserById(Integer.parseInt(id));
+        List<User> userList = new ArrayList<User>();
+        userList.add(user);
+
 
         Gson gson = new Gson();
-        String output = gson.toJson(new UserDTO(user.getBio(), user.getWebsite(), user.getLocation(), user.getUsername()));
+        String output = gson.toJson(convertIntoDTO(userList).get(0));
         return Response.status(200).entity(output).build();
     }
 
@@ -81,10 +85,18 @@ public class UserServiceRest {
 
     private List<UserDTO> convertIntoDTO(List<User> users){
         List<UserDTO> dataObjectList = new ArrayList<>();
+        List<FollowerDTO> followers = new ArrayList<>();
+        List<FollowerDTO> following = new ArrayList<>();
 
         for (User user :
                 users) {
-            dataObjectList.add(new UserDTO(user.getBio(), user.getWebsite(), user.getLocation(), user.getUsername()));
+            for (User followed: user.getFollowing()){
+                following.add(new FollowerDTO(followed.getUsername(), (int) followed.getId()));
+            }
+            for (User follower: user.getFollowers()){
+                followers.add(new FollowerDTO(follower.getUsername(), (int) follower.getId()));
+            }
+            dataObjectList.add(new UserDTO(user.getBio(), user.getWebsite(), user.getLocation(), user.getUsername(), followers,following));
         }
 
         return dataObjectList;

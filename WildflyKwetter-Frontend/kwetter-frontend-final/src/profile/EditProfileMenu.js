@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios'
 import { withRouter } from 'react-router-dom';
-import { ContentSave } from 'material-ui/svg-icons';
 
 class EditProfileMenu extends React.Component {
 
@@ -43,11 +42,12 @@ class EditProfileMenu extends React.Component {
                 if (response.status === 200) {
                     if (response.data === "Username has been changed!") {
                         this.props.notify(response.data)
+                        localStorage.setItem('username', this.state.username)
                     }
                     else {
                         this.props.notify(response.data)
                     }
-                    localStorage.setItem('username', this.state.username)
+                    this.props.updateProfile(this.state.username, this.state.bio,this.state.location, this.state.website)
                 }
                 else {
                     console.log(response)
@@ -63,8 +63,6 @@ class EditProfileMenu extends React.Component {
     }
 
     render() {
-        console.log('HERE')
-        console.log(this.state)
         
         return (
             <div>

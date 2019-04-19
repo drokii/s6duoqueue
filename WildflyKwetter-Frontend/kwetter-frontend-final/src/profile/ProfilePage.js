@@ -9,6 +9,7 @@ import EditProfileMenu from './EditProfileMenu';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { withRouter } from 'react-router-dom';
+import FollowerAvatar from './FollowerAvatar';
 
 class ProfilePage extends React.Component {
 
@@ -19,7 +20,9 @@ class ProfilePage extends React.Component {
         website: '',
         location: '',
         tweets: [],
-        modal: false
+        modal: false,
+        followers: [],
+        following: []
     }
 
     constructor(props) {
@@ -28,16 +31,31 @@ class ProfilePage extends React.Component {
         this.retrieveUser = this.retrieveUser.bind(this)
         this.toggleModal = this.toggleModal.bind(this)
         this.notify = this.notify.bind(this)
+        this.updateProfile = this.updateProfile.bind(this)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.location.state !== nextProps.location.state) {
+            window.location.reload()
+        }
     }
 
     componentDidMount() {
         this.setState({ userId: this.props.location.state })
     }
 
+    updateProfile = (username, bio, location, website) => {
+        this.setState({
+            username: username,
+            bio: bio,
+            website: website,
+            location: location,
+        })
+    }
 
     retrieveTweets = () => {
         try {
-            var url = '/tweet/get/' // replace by tweets by followers soon
+            var url = '/tweet/get/'
             var activeUser = this.state.userId
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
@@ -51,6 +69,7 @@ class ProfilePage extends React.Component {
         }
 
     }
+
 
     toggleModal() {
         this.setState(prevState => ({
@@ -72,15 +91,15 @@ class ProfilePage extends React.Component {
                     username: response.data.username,
                     website: response.data.website,
                     location: response.data.location,
-                    bio: response.data.bio
+                    bio: response.data.bio,
+                    followers: response.data.followers,
+                    following: response.data.following
                 })
                 console.log(this.state)
             })
             .catch(function (error) {
                 console.log(error);
             });
-
-
     }
 
     render() {
@@ -94,16 +113,24 @@ class ProfilePage extends React.Component {
             return <Redirect to='/' />
         };
 
-        if (this.state.tweets.length === 0) {
-            this.retrieveTweets()
-            return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
-        }
-
         if (this.state.username === '') {
             this.retrieveUser()
             return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
         }
 
+        if (this.state.tweets.length === 0) {
+            this.retrieveTweets()
+            return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
+        }
+
+        const followers = this.state.followers.map(follower => {
+            return <FollowerAvatar username={follower.username} id={follower.id} navigateToOtherUser={this.navigateToOtherUser} />;
+        });
+
+        const following = this.state.following.map(following => {
+            return <FollowerAvatar username={following.username} id={following.id} navigateToOtherUser={this.navigateToOtherUser} />;
+        });
+        console.log(this.state)
         return (
             <div>
                 <Container style={{ marginTop: 20 }}>
@@ -128,7 +155,7 @@ class ProfilePage extends React.Component {
                                             <Button color="primary" onClick={this.toggleModal}>Edit Profile</Button>
 
                                             <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
-                                                <EditProfileMenu notify={this.notify} toggleModal={this.toggleModal} username={this.state.username} userLocation={this.state.location} website={this.state.website} bio={this.state.bio} />
+                                                <EditProfileMenu updateProfile={this.updateProfile} notify={this.notify} toggleModal={this.toggleModal} username={this.state.username} userLocation={this.state.location} website={this.state.website} bio={this.state.bio} />
                                             </Modal>
 
                                         </CardBody>
@@ -147,12 +174,32 @@ class ProfilePage extends React.Component {
                     </Row>
                     <Row>
                         <Col xs="6" sm="4" style={{ marginTop: 20 }}>
-                            <Card>
-                                <CardBody>
+                            <Row>
+                                <Col>
+                                    <Card style={{ textAlign: 'center' }}><CardTitle style={{ marginTop: 10 }}><b>Follower: {followers.length}</b></CardTitle></Card>
 
-                                </CardBody>
-                            </Card>
+                                    <Card style={{ height: '20%', textAlign: 'center', overflow: 'auto' }}>
+                                        <CardBody>
+                                            <div style={{ height: '20%' }}>
+                                                {followers}
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+                                <Col>
+                                    <Card style={{ textAlign: 'center' }}><CardTitle style={{ marginTop: 10 }}><b>Following: {following.length}</b></CardTitle></Card>
+                                    <Card style={{ height: '20%', overflow: 'auto', textAlign: 'center' }}>
+                                        <CardBody>
+                                            <div style={{ height: '20%' }}>
+                                                {following}
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+
+                            </Row>
                         </Col>
+
 
                     </Row>
                 </Container>

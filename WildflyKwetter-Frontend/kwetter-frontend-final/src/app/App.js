@@ -21,8 +21,6 @@ class App extends Component {
   }
 
   authenticate(username) {
-    console.log('authorized!')
-    console.log(username)
     this.setState({
       isAuthenticated: true,
       activeUser: username,
