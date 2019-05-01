@@ -51,7 +51,6 @@ public class UserDAOJPA extends EntityDAOJPA<User> {
     }
 
     public List<Tweet> getAllTweetsFromUser(String username) throws UserNotFoundException {
-        ArrayList<Tweet> tweets = new ArrayList();
 
         Query query = em.createQuery("SELECT t FROM Tweet t WHERE t.author = :id")
                 .setParameter("id", findByUsername(username));
