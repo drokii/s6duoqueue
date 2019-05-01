@@ -41,9 +41,8 @@ public class TweetService {
             tweet.setMessage(message);
 
             tweet.setAuthor(user);
-            user.addTweet(tweet);
 
-            tweetDAO.update(tweet);
+            tweetDAO.create(tweet);
             userDAOJPA.update(user);
 
         } else {

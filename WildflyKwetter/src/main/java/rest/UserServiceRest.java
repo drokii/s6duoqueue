@@ -2,7 +2,6 @@ package rest;
 
 import auth.Secured;
 import auth.dtos.FollowerDTO;
-import auth.dtos.TweetDTO;
 import auth.dtos.UserDTO;
 import auth.requests.EditUserRequest;
 import auth.requests.FollowRequest;
@@ -10,7 +9,6 @@ import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
 import exceptions.UsernameTakenException;
-import models.Tweet;
 import models.User;
 import services.UserService;
 
@@ -19,6 +17,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 @Produces({"application/json"})
@@ -27,6 +27,7 @@ public class UserServiceRest {
 
     @Inject
     UserService userService;
+
     // TODO: GETTERS USING USERNAME NEED TO SHIFT TO ID
     @GET
     @Path("/{id}")
@@ -70,7 +71,7 @@ public class UserServiceRest {
 
     }
 
-    @GET
+    @POST
     @Path("/follow")
     public Response follow(FollowRequest request) {
         try {
@@ -83,20 +84,37 @@ public class UserServiceRest {
 
     }
 
-    private List<UserDTO> convertIntoDTO(List<User> users){
+    private List<UserDTO> convertIntoDTO(List<User> users) {
         List<UserDTO> dataObjectList = new ArrayList<>();
         List<FollowerDTO> followers = new ArrayList<>();
         List<FollowerDTO> following = new ArrayList<>();
 
-        for (User user :
-                users) {
-            for (User followed: user.getFollowing()){
-                following.add(new FollowerDTO(followed.getUsername(), (int) followed.getId()));
-            }
-            for (User follower: user.getFollowers()){
-                followers.add(new FollowerDTO(follower.getUsername(), (int) follower.getId()));
-            }
-            dataObjectList.add(new UserDTO(user.getBio(), user.getWebsite(), user.getLocation(), user.getUsername(), followers,following));
+        Set<String> noRepeatingFollowers= new TreeSet<>();
+        Set<String> noRepeatingFollowing= new TreeSet<>();
+
+        for (User user : users
+        ) {
+
+                for (User followed : user.getFollowing()) {
+                    if (!noRepeatingFollowing.contains(followed.getUsername())) {
+                        following.add(new FollowerDTO(followed.getUsername(), (int) followed.getId()));
+                        noRepeatingFollowing.add(followed.getUsername());
+
+                    }
+
+                }
+                for (User follower : user.getFollowers()) {
+                    if (!noRepeatingFollowers.contains(follower.getUsername())) {
+                        followers.add(new FollowerDTO(follower.getUsername(), (int) follower.getId()));
+                        noRepeatingFollowers.add(follower.getUsername());
+                    }
+                }
+
+
+            dataObjectList.add(new UserDTO(user.getBio(), user.getWebsite(), user.getLocation(), user.getUsername(), followers, following));
+            noRepeatingFollowing.clear();
+            noRepeatingFollowers.clear();
+
         }
 
         return dataObjectList;
