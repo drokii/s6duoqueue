@@ -1,6 +1,8 @@
 package auth;
 
 import javax.crypto.spec.SecretKeySpec;
+import javax.ejb.Singleton;
+import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.xml.bind.DatatypeConverter;
 import java.security.Key;
@@ -10,7 +12,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.security.Keys;
 
-@Stateless
+@Singleton
 public class TokenHelper {
 
     private final Key SECRET = Keys.secretKeyFor(SignatureAlgorithm.HS256);

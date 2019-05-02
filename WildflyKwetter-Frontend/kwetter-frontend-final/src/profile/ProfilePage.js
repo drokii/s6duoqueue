@@ -52,6 +52,7 @@ class ProfilePage extends React.Component {
         this.setState({ userId: this.props.location.state })
 
         this.webSocket.onmessage = evt =>{
+            console.log("Tweet Received Via WebSocket")
             this.retrieveTweets()
         }
     }
@@ -67,7 +68,7 @@ class ProfilePage extends React.Component {
 
     retrieveTweets = () => {
         try {
-            var url = '/tweet/followers/'
+            var url = '/tweet/get/'
             var activeUser = this.state.userId
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {

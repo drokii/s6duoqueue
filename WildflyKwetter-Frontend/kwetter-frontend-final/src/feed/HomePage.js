@@ -28,6 +28,8 @@ class HomePage extends React.Component {
 
         this.webSocket.onmessage = evt =>{
             this.retrieveTweets()
+            console.log("Tweet Received Via WebSocket")
+
         }
     }
 
