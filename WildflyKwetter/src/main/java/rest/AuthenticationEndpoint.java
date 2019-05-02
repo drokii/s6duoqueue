@@ -25,7 +25,7 @@ public class AuthenticationEndpoint {
     public Response authenticateUser(LoginRequest loginRequest) {
 
         try {
-            authenticate(loginRequest.getUsername(), loginRequest.getUsername());
+            authenticate(loginRequest.getUsername(), loginRequest.getPassword());
             String token = issueToken(loginRequest.getUsername());
 
             return Response.ok(token).build();

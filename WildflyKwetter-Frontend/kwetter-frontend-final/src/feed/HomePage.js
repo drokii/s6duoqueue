@@ -5,30 +5,44 @@ import axios from 'axios';
 import { Col, Row, Spinner, Container } from 'reactstrap';
 import InputTweet from './InputTweet';
 import jwt_decode from 'jwt-decode';
-
+ 
 class HomePage extends React.Component {
 
     state = {
         tweets: []
     }
 
+    webSocket;
+
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
+        this.webSocket = props.webSocket
     }
 
+    
     componentDidMount() {
         var activeUser = this.props.getActiveUser()
         this.setState({ activeUser: activeUser })
+
+        this.webSocket.onmessage = evt =>{
+            this.retrieveTweets()
+        }
     }
+
+    
 
     retrieveTweets = () => {
         try {
-            var url = '/tweet/get/' // replace by tweets by followers soon
+            var url = '/tweet/followers/' // replace by tweets by followers soon
             var activeUser = jwt_decode(localStorage.getItem('token')).sub
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
                     console.log(response)
+                    response.data.sort(function(a, b) {
+                        var dateA = new Date(a.date), dateB = new Date(b.date);
+                        return dateA - dateB;
+                    });
                     this.setState({ tweets: response.data })
                     console.log(this.state.tweets)
                 })
@@ -40,6 +54,7 @@ class HomePage extends React.Component {
         }
 
     }
+
 
     render() {
         var isAuthenticated = localStorage.getItem('token');
@@ -59,14 +74,16 @@ class HomePage extends React.Component {
                         <Row>
                             <Col>
                                 <h1 style={{ textAlign: 'center', marginBottom: 20 }}>Kwetter.</h1>
-                                <InputTweet activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
+                                <InputTweet webSocket={this.webSocket} activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
                                 <TweetFeed tweets={this.state.tweets} />
+                                
                             </Col>
                         </Row>
 
 
 
                     </Container>
+                    
                 </div>
             );
         }

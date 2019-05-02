@@ -84,6 +84,7 @@ public class UserServiceRest {
     }
 
     private List<UserDTO> convertIntoDTO(List<User> users){
+
         List<UserDTO> dataObjectList = new ArrayList<>();
         List<FollowerDTO> followers = new ArrayList<>();
         List<FollowerDTO> following = new ArrayList<>();

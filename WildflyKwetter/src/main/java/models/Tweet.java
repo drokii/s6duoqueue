@@ -60,7 +60,6 @@ public class Tweet {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(id, message, date);
     }
 

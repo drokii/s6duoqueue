@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios'
 import { withRouter } from 'react-router-dom';
 

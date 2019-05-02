@@ -1,8 +1,7 @@
 import React from 'react';
-import { Spinner, Container, Row, Col, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button, Card, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Spinner, Container, Row, Col, CardBody, CardTitle, CardSubtitle, CardText, Button, Card, Modal } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
 import TweetFeed from '../feed/TweetFeed';
-import jwt_decode from 'jwt-decode';
 import axios from 'axios';
 import InputTweet from '../feed/InputTweet';
 import EditProfileMenu from './EditProfileMenu';
@@ -25,6 +24,8 @@ class ProfilePage extends React.Component {
         following: []
     }
 
+    webSocket;
+
     constructor(props) {
         super(props)
         this.retrieveTweets = this.retrieveTweets.bind(this)
@@ -32,6 +33,9 @@ class ProfilePage extends React.Component {
         this.toggleModal = this.toggleModal.bind(this)
         this.notify = this.notify.bind(this)
         this.updateProfile = this.updateProfile.bind(this)
+
+        this.webSocket = props.webSocket
+
     }
 
     componentWillReceiveProps(nextProps) {
@@ -42,6 +46,10 @@ class ProfilePage extends React.Component {
 
     componentDidMount() {
         this.setState({ userId: this.props.location.state })
+
+        this.webSocket.onmessage = evt =>{
+            this.retrieveTweets()
+        }
     }
 
     updateProfile = (username, bio, location, website) => {
@@ -55,7 +63,7 @@ class ProfilePage extends React.Component {
 
     retrieveTweets = () => {
         try {
-            var url = '/tweet/get/'
+            var url = '/tweet/followers/'
             var activeUser = this.state.userId
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {
@@ -69,7 +77,6 @@ class ProfilePage extends React.Component {
         }
 
     }
-
 
     toggleModal() {
         this.setState(prevState => ({
@@ -167,7 +174,7 @@ class ProfilePage extends React.Component {
 
                         <Col>
                             <Card>
-                                <InputTweet activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
+                                <InputTweet webSocket={this.webSocket} activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
                                 <TweetFeed tweets={this.state.tweets} />
                             </Card>
                         </Col>
