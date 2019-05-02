@@ -120,10 +120,6 @@ public class AdminPresenter {
         }
     }
 
-/*Tweets*/
-
-
-
     @Produces
     @Named
     public List<Tweet> getTweets() {

@@ -9,7 +9,8 @@ import jwt_decode from 'jwt-decode';
 class HomePage extends React.Component {
 
     state = {
-        tweets: []
+        tweets: [],
+        retrieved: false
     }
 
     webSocket;
@@ -43,8 +44,8 @@ class HomePage extends React.Component {
                         var dateA = new Date(a.date), dateB = new Date(b.date);
                         return dateA - dateB;
                     });
-                    this.setState({ tweets: response.data })
-                    console.log(this.state.tweets)
+                    this.setState({ tweets: response.data,
+                    retrieved : true })
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -62,7 +63,7 @@ class HomePage extends React.Component {
             return <Redirect to='/login' />
         };
 
-        if (this.state.tweets.length === 0) {
+        if (!this.state.retrieved) {
             this.retrieveTweets()
             return <div style={{ marginTop: 50, width: '50vw', marginLeft: 'auto', marginRight: 'auto' }}> <Spinner style={{ margin: 'auto', display: 'block', width: '3rem', height: '3rem' }} type="grow" /> </div>
         }
