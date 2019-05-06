@@ -11,8 +11,11 @@ import models.Tweet;
 import models.User;
 import services.TweetService;
 import services.UserService;
+import websockets.WebsocketEndpoint;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.websocket.server.ServerEndpointConfig;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -50,13 +53,13 @@ public class TweetServiceRest {
 
     @GET
     @Path("/followers/{id}")
-    public Response getTweetsFromFollowers(@PathParam("id") long id) {
+    public Response getTweetsFromFollowing(@PathParam("id") long id) {
         List<Tweet> allTweets = new ArrayList<>();
         List<Tweet> tweetList;
 
         try {
 
-            for (User follower: userService.getUserById((int) id).getFollowers()){
+            for (User follower: userService.getUserById((int) id).getFollowing()){
                tweetList = tweetService.getTweetsFromUser(follower.getUsername());
                allTweets.addAll(tweetList);
             }

@@ -13,11 +13,13 @@ class InputTweet extends React.Component {
         tweet : '' 
     }
 
+    webSocket;
+
     constructor(props) {
         super(props)
         this.handlePostTweet = this.handlePostTweet.bind(this)
         this.handleChange= this.handleChange.bind(this)
-        
+        this.webSocket = props.webSocket;
     }
 
     handleChange(e) {
@@ -48,6 +50,8 @@ class InputTweet extends React.Component {
                 console.log(error)
                 return <Redirect to='/login' />
             });
+
+            this.webSocket.send("I posted a tweet.")
     };
 
     render() {

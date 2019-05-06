@@ -13,6 +13,8 @@ class App extends Component {
 
   }
 
+  webSocket = new WebSocket("ws://localhost:8080/kwetter/kwettersocket")
+
   constructor(props) {
     super(props)
     this.authenticate = this.authenticate.bind(this)
@@ -31,7 +33,7 @@ class App extends Component {
     return this.state.isAuthenticated
   }
 
-  getActiveUser(){
+  getActiveUser() {
     return this.state.activeUser
   }
 
@@ -40,8 +42,8 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path="/login" exact render={(props) => <LoginPage {...props} authenticate={this.authenticate} />} />
-          <Route path="/" exact render={(props) => <HomePage {...props} checkWhetherAuthenticated={this.checkWhetherAuthenticated} getActiveUser={this.getActiveUser} />} />
-          <Route path="/profile" exact component={ProfilePage}/>
+          <Route path="/" exact render={(props) => <HomePage {...props} checkWhetherAuthenticated={this.checkWhetherAuthenticated} getActiveUser={this.getActiveUser} webSocket={this.webSocket}/>} />
+          <Route path="/profile" exact render={(props) =><ProfilePage {...props} webSocket={this.webSocket}/> } />
         </Switch>
       </div>
     );
