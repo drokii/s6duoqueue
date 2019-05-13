@@ -42,6 +42,7 @@ class HomePage extends React.Component {
     }
 
     retrieveSearch = () => {
+        
         try {
             var url = '/tweet/search/'
             axios.get(url.concat(this.state.search), { headers: { Authorization: localStorage.getItem('token') } })
@@ -87,7 +88,9 @@ class HomePage extends React.Component {
     }
 
     checkSearchEmpty = () => {
+        console.log("Searchtweets length")
 
+        console.log(this.state.searchTweets.length)
         if (this.state.searchTweets.length > 0) {
             return <TweetFeed tweets={this.state.searchTweets}/>
 
@@ -101,6 +104,7 @@ class HomePage extends React.Component {
         this.setState(prevState => ({
             modal: !prevState.modal
         }));
+        
     }
 
 

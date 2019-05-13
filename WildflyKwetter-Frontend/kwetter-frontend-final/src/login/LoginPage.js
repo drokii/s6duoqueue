@@ -92,7 +92,6 @@ class LoginPage extends React.Component {
                         <Button style={{ margin: 'auto', display: 'block' }} >Submit</Button>
                         <ToastContainer/>
                     </Col>
-
                 </Form>
             </Container>
         );

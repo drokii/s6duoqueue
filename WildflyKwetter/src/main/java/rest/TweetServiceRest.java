@@ -104,7 +104,7 @@ public class TweetServiceRest {
         List<Tweet> tweetList = tweetService.lookForTweet(search);
 
         if (tweetList.isEmpty()) {
-            return Response.status(200).entity("Nothing found containing " + search + "!").build();
+            return Response.status(200).entity("").build();
         }
 
         Gson gson = new Gson();

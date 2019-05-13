@@ -6,47 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/profile/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/profile/ProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/app/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/app/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/app/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/borb.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/InputTweet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/LoginDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/ProfileCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/ProfileFeed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/components/Tweet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Feed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Navbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/containers/Profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/arquillian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/arquillian.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/jboss-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/jboss-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kwetter/loginadmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/kwetter/loginadmin.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,15 +31,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,16 +79,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+            <state relative-caret-position="260">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1961#2189#0" expanded="true" />
                 <element signature="e#2188#2189#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/TweetFeed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -458,7 +417,7 @@
     <property name="SearchEverywhereHistoryKey" value="ServiceBean&#9;PSI&#9;JAVA://javax.management.relation.RelationServiceMBean" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557743096531" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557744620560" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="H2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
@@ -719,7 +678,7 @@
       <workItem from="1555663723926" duration="4967000" />
       <workItem from="1556808490768" duration="1523000" />
       <workItem from="1557062312408" duration="1589000" />
-      <workItem from="1557733065059" duration="5107000" />
+      <workItem from="1557733065059" duration="5739000" />
     </task>
     <servers />
   </component>
@@ -756,7 +715,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234065000" />
+    <option name="totallyTimeSpent" value="234697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,13 +832,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/presenters/helper/UserConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/loginadmin.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1162,13 +1114,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+        <state relative-caret-position="260">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1961#2189#0" expanded="true" />
             <element signature="e#2188#2189#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/feed/TweetFeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
