@@ -19,6 +19,8 @@ import javax.websocket.server.ServerEndpointConfig;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -55,13 +57,21 @@ public class TweetServiceRest {
     @Path("/followers/{id}")
     public Response getTweetsFromFollowing(@PathParam("id") long id) {
         List<Tweet> allTweets = new ArrayList<>();
-        List<Tweet> tweetList;
+        List<Tweet> tweetList = null;
 
         try {
 
-            for (User follower: userService.getUserById((int) id).getFollowing()){
-               tweetList = tweetService.getTweetsFromUser(follower.getUsername());
-               allTweets.addAll(tweetList);
+            for (User follower : userService.getUserById((int) id).getFollowing()) {
+                tweetList = tweetService.getTweetsFromUser(follower.getUsername());
+                allTweets.addAll(tweetList);
+            }
+            if (tweetList != null) {
+                Collections.sort(tweetList, new Comparator<Tweet>() {
+                    @Override
+                    public int compare(Tweet t1, Tweet t2) {
+                        return t1.getDate().compareTo((t2.getDate()));
+                    }
+                });
             }
 
             Gson gson = new Gson();
@@ -98,13 +108,13 @@ public class TweetServiceRest {
         }
 
         Gson gson = new Gson();
-        String output = gson.toJson(tweetList);
+        String output = gson.toJson(convertIntoDTO(tweetList));
 
         return Response.status(200).entity(output).build();
 
     }
 
-    private List<TweetDTO> convertIntoDTO(List<Tweet> tweets){
+    private List<TweetDTO> convertIntoDTO(List<Tweet> tweets) {
         List<TweetDTO> dataObjectList = new ArrayList<>();
 
         for (Tweet t :

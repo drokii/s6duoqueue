@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spinner, Container, Row, Col, CardBody, CardTitle, CardSubtitle, CardText, Button, Card, Modal } from 'reactstrap';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import TweetFeed from '../feed/TweetFeed';
 import axios from 'axios';
 import InputTweet from '../feed/InputTweet';
@@ -51,7 +51,7 @@ class ProfilePage extends React.Component {
     componentDidMount() {
         this.setState({ userId: this.props.location.state })
 
-        this.webSocket.onmessage = evt =>{
+        this.webSocket.onmessage = evt => {
             console.log("Tweet Received Via WebSocket")
             this.retrieveTweets()
         }
@@ -114,9 +114,9 @@ class ProfilePage extends React.Component {
                 }
 
                 newFollowers.push(newFollower)
-                
+
                 this.setState(prevState => ({
-                    modal: !prevState.modal,
+
                     followers: newFollowers
                 }));
 
@@ -171,6 +171,12 @@ class ProfilePage extends React.Component {
         }
     }
 
+    renderInputTweet = () => {
+        if (this.state.userId == jwt_decode(localStorage.getItem('token')).sub) {
+            return <InputTweet webSocket={this.webSocket} activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
+        }
+    }
+
     render() {
 
         var isAuthenticated = localStorage.getItem('token');
@@ -194,6 +200,7 @@ class ProfilePage extends React.Component {
 
         const renderFollow = this.renderFollowButton();
         const renderEdit = this.renderEditProfile();
+        const renderInputTweet = this.renderInputTweet();
 
         const followers = this.state.followers.map(follower => {
             return <FollowerAvatar username={follower.username} id={follower.id} navigateToOtherUser={this.navigateToOtherUser} />;
@@ -215,7 +222,7 @@ class ProfilePage extends React.Component {
                                             <img style={{ borderRadius: 80, width: 160, height: 160 }} src="https://i.imgur.com/3Gw4MkV.png" alt="Avatar" />
                                         </div>
                                         <CardBody style={{ textAlign: 'center' }}>
-                                            <CardTitle><b>{this.state.username}</b></CardTitle>
+                                            <CardTitle><h3>{this.state.username}</h3></CardTitle>
                                             <small className="text-muted">Bio</small>
                                             <CardSubtitle>{this.state.bio}</CardSubtitle>
                                             <small className="text-muted">Location</small>
@@ -226,6 +233,11 @@ class ProfilePage extends React.Component {
                                             {renderFollow}
                                             {renderEdit}
 
+                                            <div style={{ marginTop: 10, textAlign: 'center', marginBottom: 20 }}>
+                                                <Link style={{ color: 'black', textDecoration: 'none' }} to={{pathname: '/'}} >
+                                                    <b>Back to Home Page</b>
+                                                </Link>
+                                            </div>
                                             <Modal isOpen={this.state.modal} toggle={this.toggleModal} className={this.props.className}>
                                                 <EditProfileMenu updateProfile={this.updateProfile} notify={this.notify} toggleModal={this.toggleModal} username={this.state.username} userLocation={this.state.location} website={this.state.website} bio={this.state.bio} />
                                             </Modal>
@@ -239,7 +251,7 @@ class ProfilePage extends React.Component {
 
                         <Col>
                             <Card>
-                                <InputTweet webSocket={this.webSocket} activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
+                                {renderInputTweet}
                                 <TweetFeed tweets={this.state.tweets} />
                             </Card>
                         </Col>
@@ -247,7 +259,7 @@ class ProfilePage extends React.Component {
                     <Row>
                         <Col xs="6" sm="4" style={{ marginTop: 20 }}>
                             <Row>
-                                <Col style={{  width:160, paddingRight: 0 }}>
+                                <Col style={{ width: 160, paddingRight: 0 }}>
                                     <Card style={{ textAlign: 'center' }}><CardTitle style={{ marginTop: 10 }}><b>Follower: {followers.length}</b></CardTitle></Card>
 
                                     <Card style={{ height: 160, textAlign: 'center', overflow: 'auto' }}>
@@ -258,7 +270,7 @@ class ProfilePage extends React.Component {
                                         </CardBody>
                                     </Card>
                                 </Col>
-                                <Col style={{ width:160, padding: 0 }}>
+                                <Col style={{ width: 160, padding: 0 }}>
                                     <Card style={{ textAlign: 'center' }}><CardTitle style={{ marginTop: 10 }}><b>Following: {following.length}</b></CardTitle></Card>
                                     <Card style={{ height: 160, overflow: 'auto', textAlign: 'center' }}>
                                         <CardBody>

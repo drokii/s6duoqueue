@@ -13,7 +13,7 @@ class TweetFeed extends React.Component {
         });
 
         return (
-           <div>
+           <div style={{overflow: 'auto', height: '70vh'}}>
             {tweets}
            </div> 
             
