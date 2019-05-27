@@ -83,6 +83,21 @@ public class UserServiceRest {
         }
 
     }
+    @POST
+    @Path("/login")
+    public Response authenticate(String username, String password) throws Exception {
+       try{
+           userService.logIn(username, password);
+           Gson gson = new Gson();
+           String output = gson.toJson(userService.getUserByUsername(username).getId());
+           return Response.status(200).entity(output).build();
+
+       }
+       catch (Exception e){
+           return Response.status(401).entity("Bad Credentials.").build();
+
+       }
+    }
 
     private List<UserDTO> convertIntoDTO(List<User> users) {
         List<UserDTO> dataObjectList = new ArrayList<>();
