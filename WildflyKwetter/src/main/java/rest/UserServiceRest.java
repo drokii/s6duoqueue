@@ -5,6 +5,7 @@ import auth.dtos.FollowerDTO;
 import auth.dtos.UserDTO;
 import auth.requests.EditUserRequest;
 import auth.requests.FollowRequest;
+import auth.requests.LoginRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -85,11 +86,11 @@ public class UserServiceRest {
     }
     @POST
     @Path("/login")
-    public Response authenticate(String username, String password) throws Exception {
+    public Response authenticate(LoginRequest request) throws Exception {
        try{
-           userService.logIn(username, password);
+           userService.logIn(request.getUsername(), request.getPassword());
            Gson gson = new Gson();
-           String output = gson.toJson(userService.getUserByUsername(username).getId());
+           String output = gson.toJson(userService.getUserByUsername(request.getUsername()).getId());
            return Response.status(200).entity(output).build();
 
        }
