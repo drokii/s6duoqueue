@@ -5,6 +5,7 @@ import auth.dtos.FollowerDTO;
 import auth.dtos.UserDTO;
 import auth.requests.EditUserRequest;
 import auth.requests.FollowRequest;
+import auth.requests.LoginRequest;
 import com.google.gson.Gson;
 import exceptions.MessageTooLongException;
 import exceptions.UserNotFoundException;
@@ -82,6 +83,21 @@ public class UserServiceRest {
             return Response.status(200).entity("This user doesn't exist.").build();
         }
 
+    }
+    @POST
+    @Path("/login")
+    public Response authenticate(LoginRequest request) throws Exception {
+       try{
+           userService.logIn(request.getUsername(), request.getPassword());
+           Gson gson = new Gson();
+           String output = gson.toJson(userService.getUserByUsername(request.getUsername()).getId());
+           return Response.status(200).entity(output).build();
+
+       }
+       catch (Exception e){
+           return Response.status(401).entity("Bad Credentials.").build();
+
+       }
     }
 
     private List<UserDTO> convertIntoDTO(List<User> users) {

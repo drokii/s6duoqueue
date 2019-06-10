@@ -15,11 +15,10 @@ import io.jsonwebtoken.security.Keys;
 @Singleton
 public class TokenHelper {
 
-    private final Key SECRET = Keys.secretKeyFor(SignatureAlgorithm.HS256);
-    public String createJWT(String id, String issuer, String subject, long ttlMillis) {
+    private final SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+    private final Key SECRET = new SecretKeySpec("67566B59703373357638792F423F4528482B4D6251655468576D5A7134743777".getBytes(), signatureAlgorithm.getJcaName());
 
-        //The JWT signature algorithm we will be using to sign the token
-        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+    public String createJWT(String id, String issuer, String subject, long ttlMillis) {
 
         long nowMillis = System.currentTimeMillis();
         Date now = new Date(nowMillis);

@@ -62,7 +62,6 @@ public class UserDAOJPATest {
         assertTrue(userDAO.findByUsername("username1").getUsername().contains("username1"));
     }
 
-    @Test(expected = UserNotFoundException.class)
     public void findByUsernameNonExisting() throws UserNotFoundException {
         userDAO.findByUsername("useadarname1");
     }
