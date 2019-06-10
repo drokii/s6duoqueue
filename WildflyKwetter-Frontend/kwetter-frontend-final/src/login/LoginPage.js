@@ -33,7 +33,7 @@ class LoginPage extends React.Component {
 
     logIn = () => {
         // todo : Shove this elsewhere
-        axios.post('/authentication', {
+        axios.post('http://127.0.0.1:8080/Kwetter-Auth-Microservice/rest/authentication', {
             username: this.state.username,
             password: this.state.password
         })
