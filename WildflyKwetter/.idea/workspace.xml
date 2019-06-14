@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9c0c9a9-aaac-4195-b8fd-462f735b76ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/profile/EditProfileMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WildflyKwetter-Frontend/kwetter-frontend-final/src/profile/EditProfileMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,16 +46,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+            <state relative-caret-position="442">
+              <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -102,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="17">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+            <state relative-caret-position="208">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -209,10 +209,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/admin.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/auth/dtos/TweetDTO.java" />
         <option value="$PROJECT_DIR$/src/test/java/services/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/dtos/FollowerDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/auth/dtos/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/websockets/Device.java" />
         <option value="$PROJECT_DIR$/src/main/java/websockets/SessionHandler.java" />
@@ -222,6 +220,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/arquillian.xml" />
         <option value="$PROJECT_DIR$/src/main/java/presenters/AdminPresenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/TweetServiceRest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java" />
       </list>
     </option>
   </component>
@@ -678,7 +678,7 @@
       <workItem from="1556808490768" duration="1523000" />
       <workItem from="1557062312408" duration="1589000" />
       <workItem from="1557733065059" duration="5739000" />
-      <workItem from="1560243994402" duration="9952000" />
+      <workItem from="1560243994402" duration="10657000" />
     </task>
     <servers />
   </component>
@@ -715,7 +715,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245804000" />
+    <option name="totallyTimeSpent" value="246509000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +730,7 @@
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3621444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3621444" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -742,7 +742,7 @@
       <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281412" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989059" visible="true" weight="0.40809628" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989059" visible="true" weight="0.40809628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39667705" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1055,16 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/auth/TokenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1072,24 +1062,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jpa/EntityDAOJPA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1119,6 +1095,30 @@
             <element signature="e#2098#2301#0" expanded="true" />
             <element signature="e#2300#2301#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/websockets/WebsocketEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/UserServiceRest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
         </state>
       </provider>
     </entry>

@@ -65,9 +65,9 @@ public class UserServiceRest {
             userService.editProfile(request.getUsername(), request.getBio(), request.getLocation(), request.getWebsite());
             return Response.status(200).entity("User details have been changed!").build();
         } catch (UserNotFoundException e) {
-            return Response.status(200).entity("This user doesn't exist.").build();
+            return Response.status(422).entity("This user doesn't exist.").build();
         } catch (MessageTooLongException e) {
-            return Response.status(200).entity("Bio is too long.").build();
+            return Response.status(422).entity("Bio is too long.").build();
         }
 
     }

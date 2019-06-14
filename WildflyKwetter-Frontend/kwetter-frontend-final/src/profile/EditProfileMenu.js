@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios'
 import { withRouter } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 class EditProfileMenu extends React.Component {
 
@@ -27,6 +28,8 @@ class EditProfileMenu extends React.Component {
     }
 
     submitEdit = () => {
+
+        
         axios.post('/user/edituser', {
             username: localStorage.getItem('username'),
             desiredUsername: this.state.username,
@@ -51,12 +54,12 @@ class EditProfileMenu extends React.Component {
                 }
                 else {
                     console.log(response)
-                    // todo:bad login msg
+                    this.props.notify(response)
                 }
             })
-            .catch(function (error) {
+            .catch(error => {
                 console.log(error);
-                // todo:bad call msg
+                this.props.notify("Bio is too long.")
 
             });
 
@@ -75,6 +78,7 @@ class EditProfileMenu extends React.Component {
                     <FormGroup>
                         <Label for="bio">Biography</Label>
                         <Input type="textarea" name="bio" id="bio" placeholder={this.props.bio} onChange={this.handleChange} value={this.state.bio} />
+
                     </FormGroup>
                     <FormGroup>
                         <Label for="location">Location</Label>
