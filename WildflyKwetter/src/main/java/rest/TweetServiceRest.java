@@ -60,8 +60,10 @@ public class TweetServiceRest {
         List<Tweet> tweetList = null;
 
         try {
-
-            for (User follower : userService.getUserById((int) id).getFollowing()) {
+            ArrayList<User> followers = new ArrayList<>();
+            followers.addAll(userService.getUserById((int) id).getFollowing());
+            followers.add(userService.getUserById((int) id));
+            for (User follower : followers) {
                 tweetList = tweetService.getTweetsFromUser(follower.getUsername());
                 allTweets.addAll(tweetList);
             }
