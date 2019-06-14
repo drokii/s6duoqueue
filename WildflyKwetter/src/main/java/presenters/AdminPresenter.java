@@ -95,7 +95,7 @@ public class AdminPresenter {
         User user = new User("test", "test", "bio" , "website" , " location" );
         user.setRole(Role.ADMIN);
         userDAOJPA.create(user);
-        tweetService.postTweet("test", "YAS QUEEN");
+        tweetService.postTweet("test", "This is a demo message.");
         System.out.println(user.getRole().toString());
 
         for (int i = 0; i < 10; i++) {
@@ -103,7 +103,6 @@ public class AdminPresenter {
             u.setRole(Role.USER);
             userDAOJPA.create(u);
             userService.follow(u.getUsername(), "test");
-            tweetService.postTweet("username" + i, "YAS QUEEN");
             System.out.println(u.getRole().toString());
         }
 

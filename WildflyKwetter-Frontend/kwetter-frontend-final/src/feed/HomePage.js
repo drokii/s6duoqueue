@@ -69,7 +69,7 @@ class HomePage extends React.Component {
 
     retrieveTweets = () => {
         try {
-            var url = '/tweet/followers/' // replace by tweets by followers soon
+            var url = '/tweet/followers/' 
             var activeUser = jwt_decode(localStorage.getItem('token')).sub
             axios.get(url.concat(activeUser), { headers: { Authorization: localStorage.getItem('token') } })
                 .then(response => {

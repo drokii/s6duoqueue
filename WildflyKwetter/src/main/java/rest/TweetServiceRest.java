@@ -60,24 +60,29 @@ public class TweetServiceRest {
         List<Tweet> tweetList = null;
 
         try {
-            ArrayList<User> followers = new ArrayList<>();
-            followers.addAll(userService.getUserById((int) id).getFollowing());
+            ArrayList<User> followers = new ArrayList<>(userService.getUserById((int) id).getFollowing());
             followers.add(userService.getUserById((int) id));
+
             for (User follower : followers) {
                 tweetList = tweetService.getTweetsFromUser(follower.getUsername());
                 allTweets.addAll(tweetList);
             }
-            if (tweetList != null) {
-                Collections.sort(tweetList, new Comparator<Tweet>() {
+
+            if (allTweets != null) {
+                Collections.sort(allTweets, new Comparator<Tweet>() {
                     @Override
                     public int compare(Tweet t1, Tweet t2) {
-                        return t1.getDate().compareTo((t2.getDate()));
+                        return t2.getId() - t1.getId();
                     }
                 });
             }
 
+            for (int i = 0; i < allTweets.size(); i++) {
+                System.out.println(allTweets.get(i).getAuthor().getUsername());
+            }
+
             Gson gson = new Gson();
-            String output = gson.toJson(Lists.reverse(convertIntoDTO(allTweets)));
+            String output = gson.toJson(convertIntoDTO(allTweets));
             return Response.status(200).entity(output).build();
 
         } catch (UserNotFoundException e) {
