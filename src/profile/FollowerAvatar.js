@@ -1,6 +1,6 @@
 import {
     Card, CardBody,
-    CardTitle,  Row, Col
+    CardTitle
 } from 'reactstrap';
 import React from 'react';
 import { Link } from 'react-router-dom';

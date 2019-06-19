@@ -166,13 +166,13 @@ class ProfilePage extends React.Component {
         console.log(jwt_decode(localStorage.getItem('token')).sub)
         console.log(this.state.userId)
 
-        if (this.state.userId == jwt_decode(localStorage.getItem('token')).sub) {
+        if (this.state.userId === jwt_decode(localStorage.getItem('token')).sub) {
             return <Button color="primary" onClick={this.toggleModal}>Edit Profile</Button>
         }
     }
 
     renderInputTweet = () => {
-        if (this.state.userId == jwt_decode(localStorage.getItem('token')).sub) {
+        if (this.state.userId === jwt_decode(localStorage.getItem('token')).sub) {
             return <InputTweet webSocket={this.webSocket} activeUser={this.state.activeUser} addTweet={this.retrieveTweets} />
         }
     }
